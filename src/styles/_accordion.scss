@@ -1,0 +1,111 @@
+
+.app-schoolsystem .accordion-wrapper {
+  @media print {
+    .accordion-item-title > svg {
+      display: none;
+    }
+  }
+  
+  .app-schoolsystem-unit {
+    &.is-expanded {
+      .accordion-item-title {
+        border: none;
+
+        > svg {
+          &.fa-chevron-up {
+            display: block;
+          }
+
+          &.fa-chevron-down {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  > .accordion-item {
+    border: 0;
+    > .accordion-content {
+      padding: 15px 0;
+      display: none;
+  
+      &.is-expanded {
+        display: block;
+      }
+  
+      h1, h2, h3 {
+        margin :0;
+        margin-bottom: $grid-gutter-width/2.5;
+      }
+    }
+  }
+
+  .accordion-header {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .accordion-item-title {
+    border-bottom: 1px solid #efefef;
+    cursor: pointer;
+    position: relative;
+    color: $body-color;
+    transition: color 0.3s linear, border-color 0.3s linear;
+    padding: $grid-gutter-width/2.5 0;
+
+    &:hover {
+      color: $primary;
+      border-color: $primary;
+    }
+
+    .collapse-section-heading {
+      display: flex;
+      flex-direction: row;
+      .heading-item {
+        display: flex;
+        flex-direction: row;
+        .co-icon {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    > svg {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      color: $primary;
+
+      &.fa-chevron-up {
+        display: none;
+        padding: 4px 4px 5px;
+      }
+
+      &.fa-chevron-down {
+        padding: 5px 4px 4px;
+      }
+    }
+
+    h2,
+    h3 {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      position: relative;
+      margin: 0;
+      
+      // &.lessons-list-no-icon {
+      //   padding-left:0;
+      // }
+
+      span {
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@inherits Custom.Hybrid.RazorTyped
+@{
+  var query = App.GetQuery("Contributor");
+  var contributorStream = query.GetStream("Default");
+  var contributor = AsItems(contributorStream).FirstOrDefault();
+  var rs = App.Resources;
+}
+
+<div class="app-oer d-flex flex-column align-items-center g-1 w-100" @Kit.Toolbar.Empty().Edit(contributor)>
+  <div class="mb-2">
+    @contributor.Picture("Photo", settings: "Square", width: 100, imgClass: "rounded-circle")
+  </div>
+  <h1 class="mb-4">@Html.Raw(contributor.Get<string>("NameVisible"))</h1>
+  <div class="mb-2">
+    @Html.Raw(contributor.Get<string>("Biography"))
+  </div>
+  <div class="mb-2">
+    @Html.Raw(contributor.Get<string>("ContactInfo"))
+  </div>
+  <div class="mb-2">
+    @Html.Raw(contributor.Get<string>("CopyrightAgreement"))
+  </div>
+  <div>
+    @Html.Raw(contributor.Get<string>("CopyrightDefault"))
+  </div>
+</div>
+@Html.Partial("shared/_Assets.cshtml")

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@import "../../node_modules/bootstrap/scss/_functions";
+@import "../../node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+@import "_variables.scss";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "_gallery.scss";
+@import "_accordion.scss";
+
+
+.app-oer {
+  font-family: Inter;
+
+  .h1, .h2, .h3, .h4, .h5, .h6, body, h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+  }
+
+  .styled-label {
+    display: block; 
+    margin-bottom: 0.5rem; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    font-weight: 500; 
+    color: #111827; 
+  }
+
+  .styled-select {
+    display: block; 
+    padding: 0.625rem; 
+    border-radius: 0.5rem; 
+    border-width: 1px; 
+    border-color: #D1D5DB; 
+    width: 100%; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    color: #111827; 
+    background-color: #F9FAFB; 
+    outline-style: none; 
+  }
+
+  .styled-table-header {
+    font-size: 0.75rem;
+    line-height: 1rem; 
+    color: #374151; 
+    text-transform: uppercase; 
+    font-weight: 600;
+    background-color: #F9FAFB; 
+  }
+}

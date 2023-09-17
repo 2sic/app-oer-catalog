@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.05.00" ExportDate="2023-09-18T04:20:45.6984749+02:00">
+  <Header>
+    <App Guid="b7683572-5e6e-437d-9f21-3a3dc81bf445" />
+    <Language Default="en-us" />
+    <Dimensions />
+  </Header>
+  <AttributeSets>
+    <AttributeSet StaticName="App-Resources" Name="App-Resources" Scope="System.App" AlwaysShareConfiguration="false">
+      <Attributes>
+        <Attribute StaticName="EducationResources" Type="String" IsTitle="true">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="0bdaa58c-c263-4f73-b6d4-2327fbd41698" Json="True" KeyNumber="43">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="EducationResources" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="SelectCategory" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="39c4006c-486c-45ba-8154-a121eaedc48d" Json="True" KeyNumber="28">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="SelectCategory" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="SelectCopyright" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="2323a000-a1b5-4cea-95fb-e3e80644fcce" Json="True" KeyNumber="29">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="SelectCopyright" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="SelectLanguage" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="4fd0e633-d05e-43f3-98e9-6288b46d79b2" Json="True" KeyNumber="30">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="SelectLanguage" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Contributors" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a1d0ef93-8dd1-4730-bc26-3be3319bfeba" Json="True" KeyNumber="31">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Contributors" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Name" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="7fdda885-94ab-41c3-8c96-b3da7d1726bb" Json="True" KeyNumber="32">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Name" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="ContactInfo" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="9dcce118-42d9-4ed6-8ab7-b0881a48bc76" Json="True" KeyNumber="33">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="ContactInfo" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Categories" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="5fa6b027-3f11-4f38-8297-5da84cb4ec05" Json="True" KeyNumber="34">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Categories" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Translations" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="768e3346-7dd1-4b5f-82e3-78c64aed6b86" Json="True" KeyNumber="35">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Translations" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Copyright" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="61e08194-f562-4c54-8a1e-9d7480e77bb0" Json="True" KeyNumber="36">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Copyright" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Assets" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="dfbf5d21-c58d-4d7c-a199-728c482b2340" Json="True" KeyNumber="37">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Assets" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Link" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="38dd0638-5a05-4802-a914-7144983ef44c" Json="True" KeyNumber="38">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Link" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Video" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="d3f1376f-5be9-4b80-a3d4-2a0d6b77b2d2" Json="True" KeyNumber="39">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Video" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Document" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="cac72d04-b728-4356-9f09-c8d3873462a3" Json="True" KeyNumber="40">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Document" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Title" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="b4f11855-7f34-4687-99b9-ee38cf13ddd6" Json="True" KeyNumber="41">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Title" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Image" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="f5a83ca5-473a-4ad0-9221-908477ca08c7" Json="True" KeyNumber="42">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Image" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+      </Attributes>
+    </AttributeSet>
+    <AttributeSet StaticName="App-Settings" Name="App-Settings" Scope="System.App" AlwaysShareConfiguration="false">
+      <Attributes />
+    </AttributeSet>
+    <AttributeSet StaticName="0abbbb81-b239-4943-bb1b-8c3288786564" Name="Asset" Scope="Default" AlwaysShareConfiguration="false">
+      <Attributes>
+        <Attribute StaticName="Link" Type="Hyperlink" IsTitle="true">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="f9c2898d-ea7b-4665-8239-738cf42d3b6d" Json="True" KeyNumber="24">
+            <Value Key="InputType" Value="hyperlink-default" Type="String" />
+            <Value Key="Name" Value="Link" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Video" Type="Hyperlink" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="23bb5dd7-2e06-4482-97ee-b02295860f7e" Json="True" KeyNumber="25">
+            <Value Key="InputType" Value="hyperlink-default" Type="String" />
+            <Value Key="Name" Value="Video" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Document" Type="Hyperlink" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="bfaf857f-8aac-4b8b-ab1c-83a46124d172" Json="True" KeyNumber="26">
+            <Value Key="InputType" Value="hyperlink-default" Type="String" />
+            <Value Key="Name" Value="Document" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+      </Attributes>
+    </AttributeSet>
+    <AttributeSet StaticName="8022a7ac-d164-4046-a258-f19d8167e60d" Name="Category" Scope="Default" AlwaysShareConfiguration="false">
+      <Attributes>
+        <Attribute StaticName="Title" Type="String" IsTitle="true">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="95ba0fa5-7279-4294-81fc-e03acf3cf44b" Json="True" KeyNumber="27">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Title" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+      </Attributes>
+    </AttributeSet>
+    <AttributeSet StaticName="1ba47e78-7972-497e-ae13-5e5dff72b80a" Name="Copyright" Scope="Default" AlwaysShareConfiguration="false">
+      <Attributes>
+        <Attribute StaticName="Title" Type="String" IsTitle="true">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a345c794-fb2b-44f1-920c-4528164220de" Json="True" KeyNumber="20">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Title" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Code" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="ce79a0ce-6bd9-467a-97dd-43e5d7e3d993" Json="True" KeyNumber="21">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Code" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="link" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="3670abb6-ab7f-4174-8d85-e0a0ecbf1869" Json="True" KeyNumber="22">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="link" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Description" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="df9e2a70-01a9-4d83-921d-0fdd601d92b0" Json="True" KeyNumber="23">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Description" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+      </Attributes>
+    </AttributeSet>
+    <AttributeSet StaticName="cb417235-6daf-4761-9bb1-bc77d7b0cde2" Name="Language" Scope="Default" AlwaysShareConfiguration="false">
+      <Attributes>
+        <Attribute StaticName="Title" Type="String" IsTitle="true">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="d3c72e52-8fa6-4616-8c34-c1e8a43dd680" Json="True" KeyNumber="18">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Title" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Code" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="244a4a22-d057-445b-a7ac-ab882cc9496d" Json="True" KeyNumber="19">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Code" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+      </Attributes>
+    </AttributeSet>
+    <AttributeSet StaticName="43bbb2a6-9358-422f-a5b8-fbb3c01ce307" Name="OpenEduResource" Scope="Default" AlwaysShareConfiguration="false">
+      <Attributes>
+        <Attribute StaticName="Title" Type="String" IsTitle="true">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="13bd6e9a-a5d3-4576-92f7-ffa148fc00f2" Json="True" KeyNumber="1">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Title" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Teaser" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="763de97e-8033-4423-863a-56cd5b8a4d13" Json="True" KeyNumber="2">
+            <Value Key="InputType" Value="string-wysiwyg" Type="String" />
+            <Value Key="Name" Value="Teaser" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Preview" Type="Hyperlink" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="ddcd2123-61fc-4761-b645-0b79fa301fb3" Json="True" KeyNumber="3">
+            <Value Key="InputType" Value="hyperlink-default" Type="String" />
+            <Value Key="Name" Value="Preview" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Description" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="3e4bb343-4b90-417d-9bd0-085974789dcc" Json="True" KeyNumber="4">
+            <Value Key="InputType" Value="string-wysiwyg" Type="String" />
+            <Value Key="Name" Value="Description" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Contributors" Type="Entity" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="647741e7-c19c-4c12-a7e1-0d21c26fe4b2" Json="True" KeyNumber="5">
+            <Value Key="CustomJavaScript" Value="" Type="String" />
+            <Value Key="DefaultValue" Value="" Type="String" />
+            <Value Key="Disabled" Value="False" Type="Boolean" />
+            <Value Key="DisableTranslation" Value="False" Type="Boolean" />
+            <Value Key="HelpLink" Value="" Type="Hyperlink" />
+            <Value Key="Information" Value="" Type="String" />
+            <Value Key="InputType" Value="entity-default" Type="String" />
+            <Value Key="Name" Value="Contributors" Type="String" />
+            <Value Key="Notes" Value="" Type="String" />
+            <Value Key="Placeholder" Value="" Type="String" />
+            <Value Key="Required" Value="False" Type="Boolean" />
+            <Value Key="Tooltip" Value="" Type="String" />
+            <Value Key="ValidationRegExJavaScript" Value="" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Entity" AttributeSetName="@Entity" EntityGUID="4811164d-a632-4485-a863-1250e484e8e4" Json="True" KeyNumber="5">
+            <Value Key="AllowMultiValue" Value="True" Type="Boolean" />
+            <Value Key="EnableAddExisting" Value="True" Type="Boolean" />
+            <Value Key="EnableCreate" Value="True" Type="Boolean" />
+            <Value Key="EnableDelete" Value="False" Type="Boolean" />
+            <Value Key="EnableEdit" Value="True" Type="Boolean" />
+            <Value Key="EnableRemove" Value="True" Type="Boolean" />
+            <Value Key="EntityType" Value="Person" Type="String" />
+            <Value Key="Label" Value="" Type="String" />
+            <Value Key="MoreFields" Value="" Type="String" />
+            <Value Key="Prefill" Value="" Type="String" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Translations" Type="Entity" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="5f8f088c-0557-428e-a939-1ac0fa13e9cf" Json="True" KeyNumber="6">
+            <Value Key="CustomJavaScript" Value="" Type="String" />
+            <Value Key="DefaultValue" Value="" Type="String" />
+            <Value Key="Disabled" Value="False" Type="Boolean" />
+            <Value Key="DisableTranslation" Value="False" Type="Boolean" />
+            <Value Key="HelpLink" Value="" Type="Hyperlink" />
+            <Value Key="Information" Value="" Type="String" />
+            <Value Key="InputType" Value="entity-default" Type="String" />
+            <Value Key="Name" Value="Translations" Type="String" />
+            <Value Key="Notes" Value="" Type="String" />
+            <Value Key="Placeholder" Value="" Type="String" />
+            <Value Key="Required" Value="False" Type="Boolean" />
+            <Value Key="Tooltip" Value="" Type="String" />
+            <Value Key="ValidationRegExJavaScript" Value="" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Entity" AttributeSetName="@Entity" EntityGUID="0fdaf878-dc53-4b0b-abaf-2e35cc7a3a95" Json="True" KeyNumber="6">
+            <Value Key="AllowMultiValue" Value="False" Type="Boolean" />
+            <Value Key="EnableAddExisting" Value="True" Type="Boolean" />
+            <Value Key="EnableCreate" Value="True" Type="Boolean" />
+            <Value Key="EnableDelete" Value="False" Type="Boolean" />
+            <Value Key="EnableEdit" Value="True" Type="Boolean" />
+            <Value Key="EnableRemove" Value="True" Type="Boolean" />
+            <Value Key="EntityType" Value="Language" Type="String" />
+            <Value Key="Label" Value="" Type="String" />
+            <Value Key="MoreFields" Value="" Type="String" />
+            <Value Key="Prefill" Value="" Type="String" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Copyright" Type="Entity" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="c7c1da51-5a63-4f3b-a68c-49768245574c" Json="True" KeyNumber="7">
+            <Value Key="CustomJavaScript" Value="" Type="String" />
+            <Value Key="DefaultValue" Value="" Type="String" />
+            <Value Key="Disabled" Value="False" Type="Boolean" />
+            <Value Key="DisableTranslation" Value="False" Type="Boolean" />
+            <Value Key="HelpLink" Value="" Type="Hyperlink" />
+            <Value Key="Information" Value="" Type="String" />
+            <Value Key="InputType" Value="entity-default" Type="String" />
+            <Value Key="Name" Value="Copyright" Type="String" />
+            <Value Key="Notes" Value="" Type="String" />
+            <Value Key="Placeholder" Value="" Type="String" />
+            <Value Key="Required" Value="False" Type="Boolean" />
+            <Value Key="Tooltip" Value="" Type="String" />
+            <Value Key="ValidationRegExJavaScript" Value="" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Entity" AttributeSetName="@Entity" EntityGUID="541083a6-e1b5-406a-8326-1a0c336a8d06" Json="True" KeyNumber="7">
+            <Value Key="AllowMultiValue" Value="True" Type="Boolean" />
+            <Value Key="EnableAddExisting" Value="True" Type="Boolean" />
+            <Value Key="EnableCreate" Value="True" Type="Boolean" />
+            <Value Key="EnableDelete" Value="False" Type="Boolean" />
+            <Value Key="EnableEdit" Value="True" Type="Boolean" />
+            <Value Key="EnableRemove" Value="True" Type="Boolean" />
+            <Value Key="EntityType" Value="Copyright" Type="String" />
+            <Value Key="Label" Value="" Type="String" />
+            <Value Key="MoreFields" Value="" Type="String" />
+            <Value Key="Prefill" Value="" Type="String" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Assets" Type="Entity" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="40b12636-e266-4585-aae3-e611089ac091" Json="True" KeyNumber="8">
+            <Value Key="CustomJavaScript" Value="" Type="String" />
+            <Value Key="DefaultValue" Value="" Type="String" />
+            <Value Key="Disabled" Value="False" Type="Boolean" />
+            <Value Key="DisableTranslation" Value="False" Type="Boolean" />
+            <Value Key="HelpLink" Value="" Type="Hyperlink" />
+            <Value Key="Information" Value="" Type="String" />
+            <Value Key="InputType" Value="entity-default" Type="String" />
+            <Value Key="Name" Value="Assets" Type="String" />
+            <Value Key="Notes" Value="" Type="String" />
+            <Value Key="Placeholder" Value="" Type="String" />
+            <Value Key="Required" Value="False" Type="Boolean" />
+            <Value Key="Tooltip" Value="" Type="String" />
+            <Value Key="ValidationRegExJavaScript" Value="" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Entity" AttributeSetName="@Entity" EntityGUID="872a6467-7fd2-431d-80d4-1e5de8455ac2" Json="True" KeyNumber="8">
+            <Value Key="AllowMultiValue" Value="True" Type="Boolean" />
+            <Value Key="EnableAddExisting" Value="True" Type="Boolean" />
+            <Value Key="EnableCreate" Value="True" Type="Boolean" />
+            <Value Key="EnableDelete" Value="False" Type="Boolean" />
+            <Value Key="EnableEdit" Value="True" Type="Boolean" />
+            <Value Key="EnableRemove" Value="True" Type="Boolean" />
+            <Value Key="EntityType" Value="Asset" Type="String" />
+            <Value Key="Label" Value="" Type="String" />
+            <Value Key="MoreFields" Value="" Type="String" />
+            <Value Key="Prefill" Value="" Type="String" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Categories" Type="Entity" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="511a9ead-fb55-43f3-92b7-34076fbd4301" Json="True" KeyNumber="9">
+            <Value Key="CustomJavaScript" Value="" Type="String" />
+            <Value Key="DefaultValue" Value="" Type="String" />
+            <Value Key="Disabled" Value="False" Type="Boolean" />
+            <Value Key="DisableTranslation" Value="False" Type="Boolean" />
+            <Value Key="HelpLink" Value="" Type="Hyperlink" />
+            <Value Key="Information" Value="" Type="String" />
+            <Value Key="InputType" Value="entity-default" Type="String" />
+            <Value Key="Name" Value="Categories" Type="String" />
+            <Value Key="Notes" Value="" Type="String" />
+            <Value Key="Placeholder" Value="" Type="String" />
+            <Value Key="Required" Value="False" Type="Boolean" />
+            <Value Key="Tooltip" Value="" Type="String" />
+            <Value Key="ValidationRegExJavaScript" Value="" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Entity" AttributeSetName="@Entity" EntityGUID="34df321e-1ba4-4884-900a-d0ce5c37804c" Json="True" KeyNumber="9">
+            <Value Key="AllowMultiValue" Value="True" Type="Boolean" />
+            <Value Key="EnableAddExisting" Value="True" Type="Boolean" />
+            <Value Key="EnableCreate" Value="True" Type="Boolean" />
+            <Value Key="EnableDelete" Value="False" Type="Boolean" />
+            <Value Key="EnableEdit" Value="True" Type="Boolean" />
+            <Value Key="EnableRemove" Value="True" Type="Boolean" />
+            <Value Key="EntityType" Value="Category" Type="String" />
+            <Value Key="Label" Value="" Type="String" />
+            <Value Key="MoreFields" Value="" Type="String" />
+            <Value Key="Prefill" Value="" Type="String" />
+          </Entity>
+        </Attribute>
+      </Attributes>
+    </AttributeSet>
+    <AttributeSet StaticName="728edb61-b556-425b-aea7-5d780d73698e" Name="Person" Scope="Default" AlwaysShareConfiguration="false">
+      <Attributes>
+        <Attribute StaticName="Name" Type="String" IsTitle="true">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="738621e4-aebf-4d16-a49f-4e2a08f8cabe" Json="True" KeyNumber="10">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Name" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="NameVisible" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="24a4f2da-0ca9-4f9a-943c-dc3ee68c7d1f" Json="True" KeyNumber="11">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="NameVisible" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Link" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="03c0adde-97e5-4602-acb2-87e8434135cb" Json="True" KeyNumber="12">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Link" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Photo" Type="Hyperlink" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="ca9168cf-836a-41d4-8bd0-2fa3c8a6cd09" Json="True" KeyNumber="13">
+            <Value Key="InputType" Value="hyperlink-default" Type="String" />
+            <Value Key="Name" Value="Photo" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="Biography" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="4c12cd45-c5a8-457b-82dd-3d7db5f5e0d8" Json="True" KeyNumber="14">
+            <Value Key="InputType" Value="string-wysiwyg" Type="String" />
+            <Value Key="Name" Value="Biography" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="ContactInfo" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="c17b8ee6-4c75-4b4c-b1e7-676a08676b59" Json="True" KeyNumber="15">
+            <Value Key="InputType" Value="string-wysiwyg" Type="String" />
+            <Value Key="Name" Value="ContactInfo" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="CopyrightAgreement" Type="Hyperlink" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="2a8f76f7-69ee-4422-98b8-ccd5664ecc61" Json="True" KeyNumber="16">
+            <Value Key="InputType" Value="hyperlink-default" Type="String" />
+            <Value Key="Name" Value="CopyrightAgreement" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="CopyrightDefault" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="c814c214-0e7f-44d0-8388-477a740ab953" Json="True" KeyNumber="17">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="CopyrightDefault" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+      </Attributes>
+    </AttributeSet>
+  </AttributeSets>
+  <Entities>
+    <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="2SexyContent-App" AttributeSetName="2SexyContent-App" EntityGUID="98db73ca-2562-47bf-add0-e4036e8250a5" Json="True" KeyNumber="4">
+      <Value Key="DisplayName" Value="app-oer-catalog" Type="String" />
+      <Value Key="Folder" Value="app-oer-catalog" Type="String" />
+      <Value Key="OriginalId" Value="" Type="String" />
+      <Value Key="Version" Value="00.00.16" Type="String" />
+    </Entity>
+    <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="e1b6a85c-36ca-4912-b56f-467e93ead391" KeyNumber="4" />
+    <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="66ed372e-2a1f-4af7-b92a-4f374bcf3625" KeyNumber="4">
+      <Value Key="Assets" Value="Assets" Type="String" />
+      <Value Key="Categories" Value="Categories" Type="String" />
+      <Value Key="ContactInfo" Value="Contact Info" Type="String" />
+      <Value Key="Contributors" Value="Contributors" Type="String" />
+      <Value Key="Copyright" Value="Copyright" Type="String" />
+      <Value Key="Document" Value="Document" Type="String" />
+      <Value Key="EducationResources" Value="Education Resources" Type="String" />
+      <Value Key="Image" Value="Image" Type="String" />
+      <Value Key="Link" Value="Link" Type="String" />
+      <Value Key="Name" Value="Name" Type="String" />
+      <Value Key="SelectCategory" Value="Select Category" Type="String" />
+      <Value Key="SelectCopyright" Value="Select Copyright" Type="String" />
+      <Value Key="SelectLanguage" Value="Select Language" Type="String" />
+      <Value Key="Title" Value="Title" Type="String" />
+      <Value Key="Translations" Value="Translations" Type="String" />
+      <Value Key="Video" Value="Video" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="c3aa9bb5-063d-4c49-9dc7-b1b8421d81ad" Json="True">
+      <Value Key="ContentTypeStaticName" Value="" Type="String" />
+      <Value Key="Icon" Value="" Type="Hyperlink" />
+      <Value Key="Identifier" Value="" Type="String" />
+      <Value Key="IsHidden" Value="False" Type="Boolean" />
+      <Value Key="ListContentTypeStaticName" Value="" Type="String" />
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String" />
+      <Value Key="Location" Value="Site" Type="String" />
+      <Value Key="Name" Value="_Main" Type="String" />
+      <Value Key="Path" Value="_Main.cshtml" Type="String" />
+      <Value Key="Pipeline" Value="f1fdf212-bf77-467a-9e22-c28fb16a4c6c" Type="Entity" />
+      <Value Key="PresentationTypeStaticName" Value="" Type="String" />
+      <Value Key="PublishData" Value="False" Type="Boolean" />
+      <Value Key="SearchIndexingDisabled" Value="False" Type="Boolean" />
+      <Value Key="SearchIndexingStreams" Value="" Type="String" />
+      <Value Key="StreamsToPublish" Value="" Type="String" />
+      <Value Key="Type" Value="C# Razor" Type="String" />
+      <Value Key="UseForList" Value="False" Type="Boolean" />
+      <Value Key="ViewController" Value="" Type="String" />
+      <Value Key="ViewNameInUrl" Value="" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="728edb61-b556-425b-aea7-5d780d73698e" AttributeSetName="Person" EntityGUID="9424d266-31d3-4f07-9431-42772b6274ce">
+      <Value Key="Biography" Value="&lt;div&gt;&#xA;&lt;div&gt;John Doe is a passionate writer with a love for storytelling.&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String" />
+      <Value Key="ContactInfo" Value="&lt;div&gt;&#xA;&lt;div&gt;You can reach John Doe at johndoe@example.com.&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String" />
+      <Value Key="CopyrightAgreement" Value="https://www.example.com/johndoe/agreement.pdf" Type="Hyperlink" />
+      <Value Key="CopyrightDefault" Value="" Type="String" />
+      <Value Key="Link" Value="https://www.example.com/johndoe" Type="String" />
+      <Value Key="Name" Value="John Doe" Type="String" />
+      <Value Key="NameVisible" Value="John D." Type="String" />
+      <Value Key="Photo" Value="file:137" Type="Hyperlink" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="728edb61-b556-425b-aea7-5d780d73698e" AttributeSetName="Person" EntityGUID="1aa18b22-7c2f-426b-8ceb-074c9415d2d7">
+      <Value Key="Biography" Value="&lt;div&gt;&#xA;&lt;div&gt;Jane Smith is an experienced photographer capturing moments through her lens.&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String" />
+      <Value Key="ContactInfo" Value="&lt;div&gt;&#xA;&lt;div&gt;Connect with Jane Smith on Instagram: @janesmithphotography.&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String" />
+      <Value Key="CopyrightAgreement" Value="https://www.example.com/janesmith/agreement.pdf" Type="Hyperlink" />
+      <Value Key="CopyrightDefault" Value="" Type="String" />
+      <Value Key="Link" Value="https://www.example.com/janesmith" Type="String" />
+      <Value Key="Name" Value="Jane Smith" Type="String" />
+      <Value Key="NameVisible" Value="Jane S." Type="String" />
+      <Value Key="Photo" Value="file:138" Type="Hyperlink" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="728edb61-b556-425b-aea7-5d780d73698e" AttributeSetName="Person" EntityGUID="79dba1c3-f6f6-45a2-b5e2-4bd7f4f7612b">
+      <Value Key="Biography" Value="&lt;div&gt;&#xA;&lt;div&gt;Alex Johnson is a software developer with a passion for open-source projects.&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String" />
+      <Value Key="ContactInfo" Value="&lt;div&gt;&#xA;&lt;div&gt;Visit Alex Johnson's GitHub profile: github.com/alexjohnson.&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String" />
+      <Value Key="CopyrightAgreement" Value="https://www.example.com/alexjohnson/agreement.pdf" Type="Hyperlink" />
+      <Value Key="CopyrightDefault" Value="" Type="String" />
+      <Value Key="Link" Value="https://www.example.com/alexjohnson" Type="String" />
+      <Value Key="Name" Value="Alex Johnson (test)" Type="String" />
+      <Value Key="NameVisible" Value="Alex J." Type="String" />
+      <Value Key="Photo" Value="file:140" Type="Hyperlink" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="1ba47e78-7972-497e-ae13-5e5dff72b80a" AttributeSetName="Copyright" EntityGUID="0ceb1f97-92f0-48b5-ab50-3383dc40f535">
+      <Value Key="Code" Value="CC-BY" Type="String" />
+      <Value Key="Description" Value="This license allows others to distribute, remix, adapt, and build upon your work, even commercially, as long as they give appropriate credit." Type="String" />
+      <Value Key="link" Value="https://creativecommons.org/licenses/by/4.0/" Type="String" />
+      <Value Key="Title" Value="Creative Commons Attribution" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="1ba47e78-7972-497e-ae13-5e5dff72b80a" AttributeSetName="Copyright" EntityGUID="b7def1d5-ece5-498c-aa80-637c7062a45a">
+      <Value Key="Code" Value="CC-BY-SA" Type="String" />
+      <Value Key="Description" Value="This license allows others to distribute, remix, adapt, and build upon your work, even commercially, as long as they give appropriate credit and license their new creations under the identical terms." Type="String" />
+      <Value Key="link" Value="https://creativecommons.org/licenses/by-sa/4.0/" Type="String" />
+      <Value Key="Title" Value="Creative Commons Attribution-ShareAlike" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="1ba47e78-7972-497e-ae13-5e5dff72b80a" AttributeSetName="Copyright" EntityGUID="edc793a9-e1e7-4707-b006-d713d805d18a">
+      <Value Key="Code" Value="CC-BY-NC" Type="String" />
+      <Value Key="Description" Value="This license allows others to remix, adapt, and build upon your work non-commercially, and although their new works must also acknowledge you and be non-commercial, they don’t have to license their derivative works on the same terms." Type="String" />
+      <Value Key="link" Value="https://creativecommons.org/licenses/by-nc/4.0/" Type="String" />
+      <Value Key="Title" Value="Creative Commons Attribution-NonCommercial" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="8022a7ac-d164-4046-a258-f19d8167e60d" AttributeSetName="Category" EntityGUID="7d108c62-8fd0-4bc0-b5ed-55c978532501">
+      <Value Key="Title" Value="Mathematics" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="8022a7ac-d164-4046-a258-f19d8167e60d" AttributeSetName="Category" EntityGUID="2a3c0d3f-cede-4fe8-b90e-903dc3f79a46">
+      <Value Key="Title" Value="Science" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="8022a7ac-d164-4046-a258-f19d8167e60d" AttributeSetName="Category" EntityGUID="fbdffb6f-a540-4c99-b1b6-8856b2840100">
+      <Value Key="Title" Value="History" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="cb417235-6daf-4761-9bb1-bc77d7b0cde2" AttributeSetName="Language" EntityGUID="f5651c2b-c175-4235-aab2-789e90301eed">
+      <Value Key="Code" Value="sw-TZ" Type="String" />
+      <Value Key="Title" Value="Swahili" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="0abbbb81-b239-4943-bb1b-8c3288786564" AttributeSetName="Asset" EntityGUID="a2b56972-94f8-48a0-9d9f-d52b44587855">
+      <Value Key="Document" Value="" Type="Hyperlink" />
+      <Value Key="Link" Value="https://2sxc.org/dnn-tutorials/en/razor/quick-ref-typed/page" Type="Hyperlink" />
+      <Value Key="Video" Value="" Type="Hyperlink" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="43bbb2a6-9358-422f-a5b8-fbb3c01ce307" AttributeSetName="OpenEduResource" EntityGUID="9f10dfe3-b2b2-4311-8f50-aec04970c835">
+      <Value Key="Assets" Value="a2b56972-94f8-48a0-9d9f-d52b44587855" Type="Entity" />
+      <Value Key="Categories" Value="7d108c62-8fd0-4bc0-b5ed-55c978532501,fbdffb6f-a540-4c99-b1b6-8856b2840100" Type="Entity" />
+      <Value Key="Contributors" Value="79dba1c3-f6f6-45a2-b5e2-4bd7f4f7612b,1aa18b22-7c2f-426b-8ceb-074c9415d2d7" Type="Entity" />
+      <Value Key="Copyright" Value="0ceb1f97-92f0-48b5-ab50-3383dc40f535" Type="Entity" />
+      <Value Key="Description" Value="&lt;p&gt;This is a cool description. &amp;nbsp;This is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool description&lt;/p&gt;" Type="String" />
+      <Value Key="Preview" Value="file:139" Type="Hyperlink" />
+      <Value Key="Teaser" Value="&lt;p&gt;This is the resource teaser dev&lt;/p&gt;" Type="String" />
+      <Value Key="Title" Value="Cool Resource (dev)" Type="String" />
+      <Value Key="Translations" Value="f5651c2b-c175-4235-aab2-789e90301eed" Type="Entity" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="e87f8752-6163-44d5-b7dd-893290c745ec" Json="True">
+      <Value Key="ContentTypeStaticName" Value="" Type="String" />
+      <Value Key="Icon" Value="" Type="Hyperlink" />
+      <Value Key="Identifier" Value="" Type="String" />
+      <Value Key="IsHidden" Value="False" Type="Boolean" />
+      <Value Key="ListContentTypeStaticName" Value="" Type="String" />
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String" />
+      <Value Key="Location" Value="Site" Type="String" />
+      <Value Key="Name" Value="_Details" Type="String" />
+      <Value Key="Path" Value="_Details.cshtml" Type="String" />
+      <Value Key="Pipeline" Value="789413b1-6e41-4261-b653-3ed7d1c7f841" Type="Entity" />
+      <Value Key="PresentationTypeStaticName" Value="" Type="String" />
+      <Value Key="PublishData" Value="False" Type="Boolean" />
+      <Value Key="SearchIndexingDisabled" Value="False" Type="Boolean" />
+      <Value Key="SearchIndexingStreams" Value="" Type="String" />
+      <Value Key="StreamsToPublish" Value="" Type="String" />
+      <Value Key="Type" Value="C# Razor" Type="String" />
+      <Value Key="UseForList" Value="False" Type="Boolean" />
+      <Value Key="ViewController" Value="" Type="String" />
+      <Value Key="ViewNameInUrl" Value="resources/.*" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="a5f3cd18-6441-4a25-9e4a-30f9eaa1b42c" Json="True">
+      <Value Key="ContentTypeStaticName" Value="" Type="String" />
+      <Value Key="Icon" Value="" Type="Hyperlink" />
+      <Value Key="Identifier" Value="" Type="String" />
+      <Value Key="IsHidden" Value="False" Type="Boolean" />
+      <Value Key="ListContentTypeStaticName" Value="" Type="String" />
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String" />
+      <Value Key="Location" Value="Site" Type="String" />
+      <Value Key="Name" Value="_Contributor" Type="String" />
+      <Value Key="Path" Value="_Contributor.cshtml" Type="String" />
+      <Value Key="Pipeline" Value="c5354179-0300-4006-a3bd-5f4da9b9a3a5" Type="Entity" />
+      <Value Key="PresentationTypeStaticName" Value="" Type="String" />
+      <Value Key="PublishData" Value="False" Type="Boolean" />
+      <Value Key="SearchIndexingDisabled" Value="False" Type="Boolean" />
+      <Value Key="SearchIndexingStreams" Value="" Type="String" />
+      <Value Key="StreamsToPublish" Value="" Type="String" />
+      <Value Key="Type" Value="C# Razor" Type="String" />
+      <Value Key="UseForList" Value="False" Type="Boolean" />
+      <Value Key="ViewController" Value="" Type="String" />
+      <Value Key="ViewNameInUrl" Value="contributors/.*" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="f1fdf212-bf77-467a-9e22-c28fb16a4c6c" Json="True">
+      <Value Key="AllowEdit" Value="True" Type="Boolean" />
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="HiddenInQueryPicker" Value="False" Type="Boolean" />
+      <Value Key="Name" Value="Resource-List" Type="String" />
+      <Value Key="Params" Value="CategoryId=[QueryString:category]&#xA;CopyrightCode=[QueryString:copyright]&#xA;LangCode=[QueryString:lang]" Type="String" />
+      <Value Key="StreamsOut" Value="Default,Header,Categories,Copyrights,Languages,AllResources,Resources" Type="String" />
+      <Value Key="StreamWiring" Value="6816b5d6-4c46-4529-967a-535201aba12c:Default&gt;16226f87-94ae-4d76-b0f4-231ddb783fd4:Default&#xD;&#xA;6816b5d6-4c46-4529-967a-535201aba12c:Drafts&gt;16226f87-94ae-4d76-b0f4-231ddb783fd4:Drafts&#xD;&#xA;6816b5d6-4c46-4529-967a-535201aba12c:Published&gt;16226f87-94ae-4d76-b0f4-231ddb783fd4:Published&#xD;&#xA;16226f87-94ae-4d76-b0f4-231ddb783fd4:Default&gt;d4a72e02-1572-4b3f-9b96-538e6190eb97:Default&#xD;&#xA;d4a72e02-1572-4b3f-9b96-538e6190eb97:Default&gt;Out:Categories&#xD;&#xA;ded0cf20-71fb-4330-a6d2-de1f6462505e:Default&gt;Out:Copyrights&#xD;&#xA;16226f87-94ae-4d76-b0f4-231ddb783fd4:Default&gt;ded0cf20-71fb-4330-a6d2-de1f6462505e:Default&#xD;&#xA;7a6de219-42c2-4b91-a58c-7e33357baf8a:Default&gt;Out:Languages&#xD;&#xA;16226f87-94ae-4d76-b0f4-231ddb783fd4:Default&gt;7a6de219-42c2-4b91-a58c-7e33357baf8a:Default&#xD;&#xA;d4a72e02-1572-4b3f-9b96-538e6190eb97:Default&gt;8d4dbb13-d227-4315-880c-866b689c6bd0:Default&#xD;&#xA;8d4dbb13-d227-4315-880c-866b689c6bd0:Default&gt;d8a4bc44-70f4-4e95-a6f0-f4f44bbfb69c:Default&#xD;&#xA;d8a4bc44-70f4-4e95-a6f0-f4f44bbfb69c:Default&gt;14baab42-8e6f-4fb8-a110-4447b61ea31e:Default&#xD;&#xA;7a6de219-42c2-4b91-a58c-7e33357baf8a:Default&gt;06faa595-24b7-4bdf-bcd7-c9563c7a1461:Default&#xD;&#xA;06faa595-24b7-4bdf-bcd7-c9563c7a1461:Default&gt;5ce59032-ff50-4606-82a6-d7a433e26fc7:Default&#xD;&#xA;5ce59032-ff50-4606-82a6-d7a433e26fc7:Default&gt;14baab42-8e6f-4fb8-a110-4447b61ea31e:PleaseRename95871&#xD;&#xA;ded0cf20-71fb-4330-a6d2-de1f6462505e:Default&gt;1d777e54-e3b5-4237-9720-7a6ef7c406bd:Default&#xD;&#xA;1d777e54-e3b5-4237-9720-7a6ef7c406bd:Default&gt;3cdee188-ba98-4ce6-80e4-c147ec02e848:Default&#xD;&#xA;3cdee188-ba98-4ce6-80e4-c147ec02e848:Default&gt;14baab42-8e6f-4fb8-a110-4447b61ea31e:PleaseRename83420&#xD;&#xA;16226f87-94ae-4d76-b0f4-231ddb783fd4:Default&gt;b2d4e18b-9ced-4cb8-b2aa-6b34fb2118b5:Default&#xD;&#xA;b2d4e18b-9ced-4cb8-b2aa-6b34fb2118b5:Default&gt;Out:AllResources&#xD;&#xA;5ce59032-ff50-4606-82a6-d7a433e26fc7:Default&gt;72633ad2-3048-48ea-a04d-b0c5532720ae:Default&#xD;&#xA;3cdee188-ba98-4ce6-80e4-c147ec02e848:Default&gt;72633ad2-3048-48ea-a04d-b0c5532720ae:PleaseRename47700&#xD;&#xA;5ce59032-ff50-4606-82a6-d7a433e26fc7:Default&gt;ab8f752a-0ba2-4167-93d0-0f0d7e094482:Default&#xD;&#xA;d8a4bc44-70f4-4e95-a6f0-f4f44bbfb69c:Default&gt;ab8f752a-0ba2-4167-93d0-0f0d7e094482:PleaseRename86916&#xD;&#xA;3cdee188-ba98-4ce6-80e4-c147ec02e848:Default&gt;966f8455-96b9-48f1-96fd-2e0bc4c4415b:Default&#xD;&#xA;d8a4bc44-70f4-4e95-a6f0-f4f44bbfb69c:Default&gt;966f8455-96b9-48f1-96fd-2e0bc4c4415b:PleaseRename53463&#xD;&#xA;14baab42-8e6f-4fb8-a110-4447b61ea31e:And&gt;1c51423f-70b5-43db-9595-d8055f72b797:Default&#xD;&#xA;72633ad2-3048-48ea-a04d-b0c5532720ae:And&gt;1c51423f-70b5-43db-9595-d8055f72b797:1st&#xD;&#xA;966f8455-96b9-48f1-96fd-2e0bc4c4415b:And&gt;1c51423f-70b5-43db-9595-d8055f72b797:2nd&#xD;&#xA;ab8f752a-0ba2-4167-93d0-0f0d7e094482:And&gt;1c51423f-70b5-43db-9595-d8055f72b797:3rd&#xD;&#xA;3cdee188-ba98-4ce6-80e4-c147ec02e848:Default&gt;1c51423f-70b5-43db-9595-d8055f72b797:4th&#xD;&#xA;5ce59032-ff50-4606-82a6-d7a433e26fc7:Default&gt;1c51423f-70b5-43db-9595-d8055f72b797:5th&#xD;&#xA;d8a4bc44-70f4-4e95-a6f0-f4f44bbfb69c:Default&gt;1c51423f-70b5-43db-9595-d8055f72b797:6th&#xD;&#xA;1c51423f-70b5-43db-9595-d8055f72b797:Default&gt;Out:Resources" Type="String" />
+      <Value Key="TestParameters" Value="&#xA;[Params:LangCode]=sw-TZ&#xA;[Params:CopyrightCode]=CC-BY" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&quot;ShowDataSourceDetails&quot;:true}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="16226f87-94ae-4d76-b0f4-231ddb783fd4" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Publishing Filter" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.PublishingFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 1000,&#xD;&#xA;  &quot;Left&quot;: 760&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="6816b5d6-4c46-4529-967a-535201aba12c" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="App Root Cache" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.IAppRoot, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 1080,&#xD;&#xA;  &quot;Left&quot;: 780&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="d4a72e02-1572-4b3f-9b96-538e6190eb97" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Categories" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.EntityTypeFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 880,&#xD;&#xA;  &quot;Left&quot;: 1140&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityTypeFilter" AttributeSetName="ToSic.Eav.DataSources.EntityTypeFilter" EntityGUID="420d4380-26ad-4ee0-b123-ddc0da5e4dd2" Json="True" KeyGuid="d4a72e02-1572-4b3f-9b96-538e6190eb97">
+      <Value Key="TypeName" Value="8022a7ac-d164-4046-a258-f19d8167e60d" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="ded0cf20-71fb-4330-a6d2-de1f6462505e" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Copyrights" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.EntityTypeFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 840,&#xD;&#xA;  &quot;Left&quot;: 140&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityTypeFilter" AttributeSetName="ToSic.Eav.DataSources.EntityTypeFilter" EntityGUID="38a21b5f-73b8-4aa5-8d37-9b1032505a67" Json="True" KeyGuid="ded0cf20-71fb-4330-a6d2-de1f6462505e">
+      <Value Key="TypeName" Value="1ba47e78-7972-497e-ae13-5e5dff72b80a" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="7a6de219-42c2-4b91-a58c-7e33357baf8a" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Languages" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.EntityTypeFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 860,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityTypeFilter" AttributeSetName="ToSic.Eav.DataSources.EntityTypeFilter" EntityGUID="f8d4271d-746e-491b-93a3-3ec60f2009ad" Json="True" KeyGuid="7a6de219-42c2-4b91-a58c-7e33357baf8a">
+      <Value Key="TypeName" Value="cb417235-6daf-4761-9bb1-bc77d7b0cde2" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="789413b1-6e41-4261-b653-3ed7d1c7f841" Json="True">
+      <Value Key="AllowEdit" Value="True" Type="Boolean" />
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="HiddenInQueryPicker" Value="False" Type="Boolean" />
+      <Value Key="Name" Value="Resource" Type="String" />
+      <Value Key="Params" Value="ResourceId=[QueryString:resources]&#xA;" Type="String" />
+      <Value Key="StreamsOut" Value="Default,Header" Type="String" />
+      <Value Key="StreamWiring" Value="f3dca223-e2bf-4ed5-bfe0-5837edfc6623:Default&gt;9a542f1d-ec12-42b9-a80d-df81be616fd1:Default&#xD;&#xA;f3dca223-e2bf-4ed5-bfe0-5837edfc6623:Drafts&gt;9a542f1d-ec12-42b9-a80d-df81be616fd1:Drafts&#xD;&#xA;f3dca223-e2bf-4ed5-bfe0-5837edfc6623:Published&gt;9a542f1d-ec12-42b9-a80d-df81be616fd1:Published&#xD;&#xA;9a542f1d-ec12-42b9-a80d-df81be616fd1:Default&gt;3056dea6-028c-4048-b2f2-d9caece81031:Default&#xD;&#xA;3056dea6-028c-4048-b2f2-d9caece81031:Default&gt;d40a2275-aa99-42e4-8d67-f15b4c46239b:Default&#xD;&#xA;d40a2275-aa99-42e4-8d67-f15b4c46239b:Default&gt;Out:Default" Type="String" />
+      <Value Key="TestParameters" Value="[Params:ResourceId]=51" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&quot;ShowDataSourceDetails&quot;:true}" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="c5354179-0300-4006-a3bd-5f4da9b9a3a5" Json="True">
+      <Value Key="AllowEdit" Value="True" Type="Boolean" />
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="HiddenInQueryPicker" Value="False" Type="Boolean" />
+      <Value Key="Name" Value="Contributor" Type="String" />
+      <Value Key="Params" Value="ContributorId=[QueryString:contributors]&#xA;" Type="String" />
+      <Value Key="StreamsOut" Value="Default,Header" Type="String" />
+      <Value Key="StreamWiring" Value="b3ac39fd-e4c7-4822-bc2d-9c5be153205d:Default&gt;ac359327-6a3b-46f2-b781-009f1725b794:Default&#xD;&#xA;b3ac39fd-e4c7-4822-bc2d-9c5be153205d:Drafts&gt;ac359327-6a3b-46f2-b781-009f1725b794:Drafts&#xD;&#xA;b3ac39fd-e4c7-4822-bc2d-9c5be153205d:Published&gt;ac359327-6a3b-46f2-b781-009f1725b794:Published&#xD;&#xA;ac359327-6a3b-46f2-b781-009f1725b794:Default&gt;d618e8c3-45fc-4685-a886-ce9febadf867:Default&#xD;&#xA;d618e8c3-45fc-4685-a886-ce9febadf867:Default&gt;ba69fe51-1a8f-4c48-ae90-d5d14db3a0ba:Default&#xD;&#xA;ba69fe51-1a8f-4c48-ae90-d5d14db3a0ba:Default&gt;Out:Default" Type="String" />
+      <Value Key="TestParameters" Value="[Params:ContributorId]=40" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&quot;ShowDataSourceDetails&quot;:true}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="d8a4bc44-70f4-4e95-a6f0-f4f44bbfb69c" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Parents" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="915217e5-7957-4303-a19c-a15505f2ad1d" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 600,&#xD;&#xA;  &quot;Left&quot;: 1100&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="14baab42-8e6f-4fb8-a110-4447b61ea31e" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Merge Streams" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.StreamMerge, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 420,&#xD;&#xA;  &quot;Left&quot;: 660&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="8d4dbb13-d227-4315-880c-866b689c6bd0" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Value Filter" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 720,&#xD;&#xA;  &quot;Left&quot;: 1160&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueFilter" AttributeSetName="ToSic.Eav.DataSources.ValueFilter" EntityGUID="e827233e-db9c-47af-850d-71f59ba9270c" Json="True" KeyGuid="8d4dbb13-d227-4315-880c-866b689c6bd0">
+      <Value Key="Attribute" Value="EntityId" Type="String" />
+      <Value Key="Languages" Value="" Type="String" />
+      <Value Key="Operator" Value="==" Type="String" />
+      <Value Key="Take" Value="" Type="String" />
+      <Value Key="Value" Value="[Params:CategoryId]" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="a72cb2f4-52bb-41e6-9281-10e69aeb0310" AttributeSetName="ParentsDataSourceConfig" EntityGUID="94c49271-fc24-437c-84f4-fc7a942b0a6b" Json="True" KeyGuid="d8a4bc44-70f4-4e95-a6f0-f4f44bbfb69c">
+      <Value Key="ContentTypeName" Value="43bbb2a6-9358-422f-a5b8-fbb3c01ce307" Type="String" />
+      <Value Key="FieldName" Value="Categories" Type="String" />
+      <Value Key="FilterDuplicates" Value="true" Type="String" />
+      <Value Key="Title" Value="Get Parent Items" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="06faa595-24b7-4bdf-bcd7-c9563c7a1461" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Value Filter" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 680,&#xD;&#xA;  &quot;Left&quot;: 700&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueFilter" AttributeSetName="ToSic.Eav.DataSources.ValueFilter" EntityGUID="31d3dd16-7592-484a-bba8-32ec4ae3d6b6" Json="True" KeyGuid="06faa595-24b7-4bdf-bcd7-c9563c7a1461">
+      <Value Key="Attribute" Value="Code" Type="String" />
+      <Value Key="Languages" Value="" Type="String" />
+      <Value Key="Operator" Value="==" Type="String" />
+      <Value Key="Take" Value="" Type="String" />
+      <Value Key="Value" Value="[Params:LangCode]" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="5ce59032-ff50-4606-82a6-d7a433e26fc7" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Parents" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="915217e5-7957-4303-a19c-a15505f2ad1d" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 540,&#xD;&#xA;  &quot;Left&quot;: 640&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="a72cb2f4-52bb-41e6-9281-10e69aeb0310" AttributeSetName="ParentsDataSourceConfig" EntityGUID="5a2de028-049d-4909-b649-22cb83a6c581" Json="True" KeyGuid="5ce59032-ff50-4606-82a6-d7a433e26fc7">
+      <Value Key="ContentTypeName" Value="43bbb2a6-9358-422f-a5b8-fbb3c01ce307" Type="String" />
+      <Value Key="FieldName" Value="Translations" Type="String" />
+      <Value Key="FilterDuplicates" Value="true" Type="String" />
+      <Value Key="Title" Value="Get Parent Items" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="1d777e54-e3b5-4237-9720-7a6ef7c406bd" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Value Filter" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 700,&#xD;&#xA;  &quot;Left&quot;: 20&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueFilter" AttributeSetName="ToSic.Eav.DataSources.ValueFilter" EntityGUID="3a52aa16-b3f5-4c82-84de-8bab23c8421d" Json="True" KeyGuid="1d777e54-e3b5-4237-9720-7a6ef7c406bd">
+      <Value Key="Attribute" Value="Code" Type="String" />
+      <Value Key="Languages" Value="" Type="String" />
+      <Value Key="Operator" Value="==" Type="String" />
+      <Value Key="Take" Value="" Type="String" />
+      <Value Key="Value" Value="[Params:CopyrightCode]" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="3cdee188-ba98-4ce6-80e4-c147ec02e848" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Parents" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="915217e5-7957-4303-a19c-a15505f2ad1d" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 580,&#xD;&#xA;  &quot;Left&quot;: 0&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="a72cb2f4-52bb-41e6-9281-10e69aeb0310" AttributeSetName="ParentsDataSourceConfig" EntityGUID="ed46c206-efd1-4f6f-9f82-e48b1325c554" Json="True" KeyGuid="3cdee188-ba98-4ce6-80e4-c147ec02e848">
+      <Value Key="ContentTypeName" Value="43bbb2a6-9358-422f-a5b8-fbb3c01ce307" Type="String" />
+      <Value Key="FieldName" Value="Copyright" Type="String" />
+      <Value Key="FilterDuplicates" Value="true" Type="String" />
+      <Value Key="Title" Value="Get Parent Items" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="b2d4e18b-9ced-4cb8-b2aa-6b34fb2118b5" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="All Resources" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.EntityTypeFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 880,&#xD;&#xA;  &quot;Left&quot;: 1540&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityTypeFilter" AttributeSetName="ToSic.Eav.DataSources.EntityTypeFilter" EntityGUID="7ec5ed68-22af-4919-adb5-19308deff290" Json="True" KeyGuid="b2d4e18b-9ced-4cb8-b2aa-6b34fb2118b5">
+      <Value Key="TypeName" Value="43bbb2a6-9358-422f-a5b8-fbb3c01ce307" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="1c51423f-70b5-43db-9595-d8055f72b797" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Stream Fallback" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.StreamFallback, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 100,&#xD;&#xA;  &quot;Left&quot;: 1300&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="72633ad2-3048-48ea-a04d-b0c5532720ae" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Merge Streams" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.StreamMerge, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 340,&#xD;&#xA;  &quot;Left&quot;: 300&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="ab8f752a-0ba2-4167-93d0-0f0d7e094482" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Merge Streams" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.StreamMerge, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 340,&#xD;&#xA;  &quot;Left&quot;: 1060&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="966f8455-96b9-48f1-96fd-2e0bc4c4415b" Json="True" KeyGuid="f1fdf212-bf77-467a-9e22-c28fb16a4c6c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Merge Streams" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.StreamMerge, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 300,&#xD;&#xA;  &quot;Left&quot;: 660&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="f3dca223-e2bf-4ed5-bfe0-5837edfc6623" Json="True" KeyGuid="789413b1-6e41-4261-b653-3ed7d1c7f841">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="App Root Cache" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.IAppRoot, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 760,&#xD;&#xA;  &quot;Left&quot;: 500&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="9a542f1d-ec12-42b9-a80d-df81be616fd1" Json="True" KeyGuid="789413b1-6e41-4261-b653-3ed7d1c7f841">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Publishing Filter" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.PublishingFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 640,&#xD;&#xA;  &quot;Left&quot;: 500&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="3056dea6-028c-4048-b2f2-d9caece81031" Json="True" KeyGuid="789413b1-6e41-4261-b653-3ed7d1c7f841">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Type-Filter" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.EntityTypeFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 480,&#xD;&#xA;  &quot;Left&quot;: 480&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="d40a2275-aa99-42e4-8d67-f15b4c46239b" Json="True" KeyGuid="789413b1-6e41-4261-b653-3ed7d1c7f841">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Value Filter" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 280,&#xD;&#xA;  &quot;Left&quot;: 480&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueFilter" AttributeSetName="ToSic.Eav.DataSources.ValueFilter" EntityGUID="848a0c0d-c4c2-448c-8fb4-c18630c1acd2" Json="True" KeyGuid="d40a2275-aa99-42e4-8d67-f15b4c46239b">
+      <Value Key="Attribute" Value="EntityId" Type="String" />
+      <Value Key="Languages" Value="" Type="String" />
+      <Value Key="Operator" Value="==" Type="String" />
+      <Value Key="Take" Value="" Type="String" />
+      <Value Key="Value" Value="[Params:ResourceId]" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityTypeFilter" AttributeSetName="ToSic.Eav.DataSources.EntityTypeFilter" EntityGUID="fea6f8c1-dae8-4fa5-950b-c599b8584c7c" Json="True" KeyGuid="3056dea6-028c-4048-b2f2-d9caece81031">
+      <Value Key="TypeName" Value="43bbb2a6-9358-422f-a5b8-fbb3c01ce307" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="ac359327-6a3b-46f2-b781-009f1725b794" Json="True" KeyGuid="c5354179-0300-4006-a3bd-5f4da9b9a3a5">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Publishing Filter" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.PublishingFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 660,&#xD;&#xA;  &quot;Left&quot;: 560&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="b3ac39fd-e4c7-4822-bc2d-9c5be153205d" Json="True" KeyGuid="c5354179-0300-4006-a3bd-5f4da9b9a3a5">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="App Root Cache" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.IAppRoot, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 800,&#xD;&#xA;  &quot;Left&quot;: 580&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="d618e8c3-45fc-4685-a886-ce9febadf867" Json="True" KeyGuid="c5354179-0300-4006-a3bd-5f4da9b9a3a5">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Type-Filter" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.EntityTypeFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 540,&#xD;&#xA;  &quot;Left&quot;: 540&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="ba69fe51-1a8f-4c48-ae90-d5d14db3a0ba" Json="True" KeyGuid="c5354179-0300-4006-a3bd-5f4da9b9a3a5">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Value Filter" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueFilter, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 320,&#xD;&#xA;  &quot;Left&quot;: 520&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityTypeFilter" AttributeSetName="ToSic.Eav.DataSources.EntityTypeFilter" EntityGUID="75613ec3-aa18-40d1-888d-5b6bcefa5604" Json="True" KeyGuid="d618e8c3-45fc-4685-a886-ce9febadf867">
+      <Value Key="TypeName" Value="728edb61-b556-425b-aea7-5d780d73698e" Type="String" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueFilter" AttributeSetName="ToSic.Eav.DataSources.ValueFilter" EntityGUID="ec164286-8d2f-445f-acd0-540886d85691" Json="True" KeyGuid="ba69fe51-1a8f-4c48-ae90-d5d14db3a0ba">
+      <Value Key="Attribute" Value="EntityId" Type="String" />
+      <Value Key="Languages" Value="" Type="String" />
+      <Value Key="Operator" Value="==" Type="String" />
+      <Value Key="Take" Value="" Type="String" />
+      <Value Key="Value" Value="[Params:ContributorId]" Type="String" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="43bbb2a6-9358-422f-a5b8-fbb3c01ce307" AttributeSetName="OpenEduResource" EntityGUID="03b1decb-dea6-4827-9e7b-d802297af86f">
+      <Value Key="Assets" Value="a2b56972-94f8-48a0-9d9f-d52b44587855,7e492b39-3ce7-404e-87cc-99a236ba1e1a" Type="Entity" />
+      <Value Key="Categories" Value="2a3c0d3f-cede-4fe8-b90e-903dc3f79a46" Type="Entity" />
+      <Value Key="Contributors" Value="79dba1c3-f6f6-45a2-b5e2-4bd7f4f7612b,9424d266-31d3-4f07-9431-42772b6274ce" Type="Entity" />
+      <Value Key="Copyright" Value="edc793a9-e1e7-4707-b006-d713d805d18a,b7def1d5-ece5-498c-aa80-637c7062a45a" Type="Entity" />
+      <Value Key="Description" Value="&lt;p&gt;This is a cool description. &amp;nbsp;This is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool descriptionThis is a cool description&lt;/p&gt;" Type="String" />
+      <Value Key="Preview" Value="file:139" Type="Hyperlink" />
+      <Value Key="Teaser" Value="&lt;div&gt;&#xA;&lt;div&gt;This document provides an overview of the fundamental principles and concepts of quantum mechanics.&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String" />
+      <Value Key="Title" Value="Introduction to Quantum Mechanics (dev)" Type="String" />
+      <Value Key="Translations" Value="f5651c2b-c175-4235-aab2-789e90301eed" Type="Entity" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="0abbbb81-b239-4943-bb1b-8c3288786564" AttributeSetName="Asset" EntityGUID="7e492b39-3ce7-404e-87cc-99a236ba1e1a">
+      <Value Key="Document" Value="" Type="Hyperlink" />
+      <Value Key="Link" Value="" Type="Hyperlink" />
+      <Value Key="Video" Value="https://www.youtube.com/watch?v=dQw4w9WgXcQ" Type="Hyperlink" />
+    </Entity>
+  </Entities>
+  <PortalFiles>
+    <File Id="137" RelativePath="adam\app-oer-catalog\ZtIklNMxB0-UMUJ3K2J0zg\Photo\the-office-how-to-watch.jpg" />
+    <File Id="138" RelativePath="adam\app-oer-catalog\IouhGi98a0KM6wdMlBXS1w\Photo\the-office-how-to-watch.jpg" />
+    <File Id="140" RelativePath="adam\app-oer-catalog\w6Hbefb2okW14kvX9PdhKw\Photo\the-office-how-to-watch.jpg" />
+    <File Id="139" RelativePath="adam\app-oer-catalog\498Qn7KyEUOPUK7ASXDINQ\Preview\app-icon.jpg" />
+  </PortalFiles>
+  <PortalFolders>
+    <Folder Id="43" RelativePath="adam/app-oer-catalog/ZtIklNMxB0-UMUJ3K2J0zg/Photo/" />
+    <Folder Id="45" RelativePath="adam/app-oer-catalog/IouhGi98a0KM6wdMlBXS1w/Photo/" />
+    <Folder Id="49" RelativePath="adam/app-oer-catalog/w6Hbefb2okW14kvX9PdhKw/Photo/" />
+    <Folder Id="47" RelativePath="adam/app-oer-catalog/498Qn7KyEUOPUK7ASXDINQ/Preview/" />
+    <Folder Id="41" RelativePath="adam/app-oer-catalog/" />
+    <Folder Id="46" RelativePath="adam/app-oer-catalog/498Qn7KyEUOPUK7ASXDINQ/" />
+    <Folder Id="44" RelativePath="adam/app-oer-catalog/IouhGi98a0KM6wdMlBXS1w/" />
+    <Folder Id="48" RelativePath="adam/app-oer-catalog/w6Hbefb2okW14kvX9PdhKw/" />
+    <Folder Id="42" RelativePath="adam/app-oer-catalog/ZtIklNMxB0-UMUJ3K2J0zg/" />
+  </PortalFolders>
+</SexyContent>

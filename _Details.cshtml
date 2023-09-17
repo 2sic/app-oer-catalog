@@ -1,0 +1,98 @@
+@inherits Custom.Hybrid.RazorTyped
+@{
+  var query = App.GetQuery("Resource");
+  var eduResourceStream = query.GetStream("Default");
+  var eduResource = AsItems(eduResourceStream).FirstOrDefault();
+  var rs = App.Resources;
+}
+
+<div class="app-oer d-flex flex-column align-items-center g-1 w-100" @Kit.Toolbar.Empty().Edit(eduResource)>
+  @eduResource.Picture("Preview", settings: "Square", width: 100, imgClass: "rounded-circle")
+  <h1 class="font-weight-medium">@eduResource.Title</h1>
+  <section class="w-100 mb-2">
+    @Html.Raw(eduResource.Get<string>("Teaser"))
+  </section>
+  <section class="w-100 mb-2">
+    @Html.Raw(eduResource.Get<string>("Description"))
+  </section>
+  <section class="w-100 mb-4">
+    <h3 class="font-weight-medium">@rs.String("Categories")</h3>
+    @foreach (var category in AsItems(eduResource.Children("Categories")))
+    {
+      <span>@Html.Raw(category.Get<string>("Title")),</span>
+    }
+    @if(AsItems(eduResource.Children("Categories")).Count() == 0){
+      <span>None</span>
+    }
+  </section>
+  <section class="w-100 mb-4">
+    <h3 class="font-weight-medium">@rs.String("Translations")</h3>
+    @foreach (var translation in AsItems(eduResource.Children("Translations")))
+    {
+      <span>@Html.Raw(translation.Get<string>("Code")),</span>
+    }
+  </section>
+  <section class="w-100 mb-4">
+    <h3 class="font-weight-medium">@rs.String("Copyright")</h3>
+    @foreach (var copyright in AsItems(eduResource.Children("Copyright")))
+    {
+      <span>@Html.Raw(copyright.Get<string>("Code")),</span>
+    }
+    @if(AsItems(eduResource.Children("Copyright")).Count() == 0){
+      <span>None</span>
+    }
+  </section>
+  <section class="w-100 mb-4">
+    <h3 class="font-weight-medium">@rs.String("Assets")</h3>
+    @foreach (var asset in AsItems(eduResource.Children("Assets")))
+    {
+      <div>
+        @if (!string.IsNullOrEmpty(asset.Get<string>("Link"))) {
+          <div>
+            <div class="font-weight-medium">@rs.String("Link")</div>
+            <a href='@(asset.Get<string>("Link"))' target="_blank">@(asset.Get<string>("Link"))</a>
+          </div>
+        } else if (!string.IsNullOrEmpty(asset.Get<string>("Video"))) {
+          <div>
+            <div class="font-weight-medium">@rs.String("Video")</div>
+            <a href='@(asset.Get<string>("Video"))' target="_blank">@(asset.Get<string>("Video"))</a>
+          </div>
+        } else if (!string.IsNullOrEmpty(asset.Get<string>("Document"))) {
+          <div>
+            <div class="font-weight-medium">@rs.String("Document")</div>
+            <a href='@(asset.Get<string>("Document"))' target="_blank">@(asset.Get<string>("Document"))</a>
+          </div>
+        }
+      </div>
+    }
+    @if(AsItems(eduResource.Children("Assets")).Count() == 0){
+      <div>None</div>
+    }
+  </section>
+  <section class="w-100 mb-4">
+    <h3 class="font-weight-medium">@rs.String("Contributors")</h3>
+    <div class="row w-100 mb-2 styled-table-header p-2 rounded-lg">
+      <div class="col font-weight-medium">
+        @rs.String("Name")
+      </div>
+      <div class="col">
+        @rs.String("ContactInfo")
+      </div>
+    </div>
+    @foreach (var contributor in AsItems(eduResource.Children("Contributors")))
+    {
+      var contibutorLink = Link.To(parameters: MyPage.Parameters.Set("contributors", contributor.Id).Remove("resources").Remove("category").Remove("lang").Remove("copyright"));
+
+      <a class="row w-100 border-bottom pb-4 pt-2 ps-2 pe-2" href="@contibutorLink" @Kit.Toolbar.Empty().Edit(contributor)>
+        <div class="col font-weight-medium">
+          @Html.Raw(contributor.Get<string>("NameVisible"))
+        </div>
+        <div class="col">
+          @Html.Raw(contributor.Get<string>("ContactInfo"))
+        </div>
+      </a>
+    }
+  </section>
+</div>
+
+@Html.Partial("shared/_Assets.cshtml")
