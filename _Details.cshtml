@@ -6,58 +6,74 @@
   var rs = App.Resources;
 }
 
-<div class="app-oer d-flex flex-column align-items-center g-1 w-100" @Kit.Toolbar.Empty().Edit(eduResource)>
-  @eduResource.Picture("Preview", settings: "Square", width: 100, imgClass: "rounded-circle")
-  <h1 class="font-weight-medium">@eduResource.Title</h1>
-  <section class="w-100 mb-2">
-    @Html.Raw(eduResource.Get<string>("Teaser"))
-  </section>
-  <section class="w-100 mb-2">
+<div class="app-oer d-flex flex-column g-1 w-100" @Kit.Toolbar.Empty().Edit(eduResource)>
+  <a class="d-flex flex-row g-4 align-items-center mb-4" href='@Link.To(parameters: MyPage.Parameters.Remove("doc"))'>
+    <div class="me-2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="height:14px">
+        <path xmlns="http://www.w3.org/2000/svg"
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+      </svg>
+    </div>
+    <div class="mt-1">@rs.String("AllResources")</div>
+  </a>
+  <div class="d-flex flex-row mb-2">
+    <div class="me-4">
+      @eduResource.Picture("Preview", settings: "Square", width: 100, imgClass: "rounded-circle mb-2")
+    </div>
+    <div>
+      <h1 class="font-weight-medium">@eduResource.Title</h1>
+      <section class="w-100 mb-4">
+        @Html.Raw(eduResource.Get<string>("Teaser"))
+      </section>
+    </div>
+  </div>
+  <section class="w-100 mb-4">
     @Html.Raw(eduResource.Get<string>("Description"))
   </section>
-  <section class="w-100 mb-4">
+  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(AsItems(eduResource.Children("Categories")))>
     <h3 class="font-weight-medium">@rs.String("Categories")</h3>
-    @foreach (var category in AsItems(eduResource.Children("Categories")))
+    @String.Join(", ", AsItems(eduResource.Children("Categories")).Select(copy => copy.Get<string>("Title")))
+
+    @if (AsItems(eduResource.Children("Categories")).Count() == 0)
     {
-      <span>@Html.Raw(category.Get<string>("Title")),</span>
-    }
-    @if(AsItems(eduResource.Children("Categories")).Count() == 0){
       <span>None</span>
     }
   </section>
-  <section class="w-100 mb-4">
+  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(AsItems(eduResource.Children("Translations")))>
     <h3 class="font-weight-medium">@rs.String("Translations")</h3>
-    @foreach (var translation in AsItems(eduResource.Children("Translations")))
-    {
-      <span>@Html.Raw(translation.Get<string>("Code")),</span>
-    }
+    @String.Join(", ", AsItems(eduResource.Children("Translations")).Select(copy => copy.Get<string>("Code")))
+
   </section>
-  <section class="w-100 mb-4">
+  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(AsItems(eduResource.Children("Copyright")))>
     <h3 class="font-weight-medium">@rs.String("Copyright")</h3>
-    @foreach (var copyright in AsItems(eduResource.Children("Copyright")))
+    @String.Join(", ", AsItems(eduResource.Children("Copyright")).Select(copy => copy.Get<string>("Code")))
+
+    @if (AsItems(eduResource.Children("Copyright")).Count() == 0)
     {
-      <span>@Html.Raw(copyright.Get<string>("Code")),</span>
-    }
-    @if(AsItems(eduResource.Children("Copyright")).Count() == 0){
       <span>None</span>
     }
   </section>
-  <section class="w-100 mb-4">
+  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(AsItems(eduResource.Children("Assets")))>
     <h3 class="font-weight-medium">@rs.String("Assets")</h3>
     @foreach (var asset in AsItems(eduResource.Children("Assets")))
     {
-      <div>
-        @if (!string.IsNullOrEmpty(asset.Get<string>("Link"))) {
+      <div @Kit.Toolbar.Empty().Edit(asset)>
+        @if (!string.IsNullOrEmpty(asset.Get<string>("Link")))
+        {
           <div>
             <div class="font-weight-medium">@rs.String("Link")</div>
             <a href='@(asset.Get<string>("Link"))' target="_blank">@(asset.Get<string>("Link"))</a>
           </div>
-        } else if (!string.IsNullOrEmpty(asset.Get<string>("Video"))) {
+        }
+        else if (!string.IsNullOrEmpty(asset.Get<string>("Video")))
+        {
           <div>
             <div class="font-weight-medium">@rs.String("Video")</div>
             <a href='@(asset.Get<string>("Video"))' target="_blank">@(asset.Get<string>("Video"))</a>
           </div>
-        } else if (!string.IsNullOrEmpty(asset.Get<string>("Document"))) {
+        }
+        else if (!string.IsNullOrEmpty(asset.Get<string>("Document")))
+        {
           <div>
             <div class="font-weight-medium">@rs.String("Document")</div>
             <a href='@(asset.Get<string>("Document"))' target="_blank">@(asset.Get<string>("Document"))</a>
@@ -65,12 +81,13 @@
         }
       </div>
     }
-    @if(AsItems(eduResource.Children("Assets")).Count() == 0){
+    @if (AsItems(eduResource.Children("Assets")).Count() == 0)
+    {
       <div>None</div>
     }
   </section>
   <section class="w-100 mb-4">
-    <h3 class="font-weight-medium">@rs.String("Contributors")</h3>
+    <h3 class="font-weight-medium mb-3">@rs.String("Contributors")</h3>
     <div class="row w-100 mb-2 styled-table-header p-2 rounded-lg">
       <div class="col font-weight-medium">
         @rs.String("Name")
@@ -81,9 +98,11 @@
     </div>
     @foreach (var contributor in AsItems(eduResource.Children("Contributors")))
     {
-      var contibutorLink = Link.To(parameters: MyPage.Parameters.Set("contributors", contributor.Id).Remove("resources").Remove("category").Remove("lang").Remove("copyright"));
+      var contibutorLink = Link.To(parameters: MyPage.Parameters.Set("contributors",
+      contributor.Id).Remove("resources").Remove("category").Remove("lang").Remove("copyright"));
 
-      <a class="row w-100 border-bottom pb-4 pt-2 ps-2 pe-2" href="@contibutorLink" @Kit.Toolbar.Empty().Edit(contributor)>
+      <a class="row w-100 border-bottom pb-4 pt-2 ps-2 pe-2" href="@contibutorLink"
+      @Kit.Toolbar.Empty().Edit(contributor)>
         <div class="col font-weight-medium">
           @Html.Raw(contributor.Get<string>("NameVisible"))
         </div>

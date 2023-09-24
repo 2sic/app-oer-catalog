@@ -9,70 +9,14 @@
   !string.IsNullOrEmpty(languageFilter);
 
   var query = App.GetQuery("Resource-List");
-  var categories = query.GetStream("Categories");
-  var copyrights = query.GetStream("Copyrights");
-  var languages = query.GetStream("Languages");
 
   var filteredResources = hasFilters ? query.GetStream("Resources") : query.GetStream("AllResources");
   var rs = App.Resources;
 }
 
-@* TODO: Split into seperate views for filter components, and list *@
-
 <div class="app-oer d-flex flex-column align-items-center g-1 w-full" @Kit.Toolbar.Default()>
   <h1 class="font-weight-medium mb-3">@rs.String("EducationResources")</h1>
-  <div class="mb-4">
-    <div class="row">
-      <div class="col-md">
-        <!-- Content for medium and larger screens -->
-        <select value="@categoryFilter" aria-label="Select category" id="app-oer-select-categories"
-          class="styled-select" onchange="navigateToUrl('app-oer-select-categories')">
-          @{
-            var removedCategory = Link.To(parameters: MyPage.Parameters.Remove("category"));
-          }
-          <option value="-1" data-href='@removedCategory'>@rs.String("SelectCategory")</option>
-          @foreach (var category in AsItems(categories))
-          {
-            var selectUrl = Link.To(parameters: MyPage.Parameters.Set("category", category.Id));
-            <option value="@category.Id" data-href='@selectUrl' @(category.Id.ToString() == categoryFilter ? "selected" :
-            "")>@category.Title</option>
-          }
-        </select>
-      </div>
-      <div class="col-md">
-        <!-- Content for medium and larger screens -->
-        <select value="@copyrightFilter" aria-label="Select copyright" id="app-oer-select-copyright"
-          class="styled-select" onchange="navigateToUrl('app-oer-select-copyright')">
-          @{
-            var removedCopyright = Link.To(parameters: MyPage.Parameters.Remove("copyright"));
-          }
-          <option value="-1" data-href='@removedCopyright'>@rs.String("SelectCopyright")</option>
-          @foreach (var copyright in AsItems(copyrights))
-          {
-            var selectUrl = Link.To(parameters: MyPage.Parameters.Set("copyright", copyright.Get<string>("Code")));
-            <option value="@(copyright.Get<string>("Code"))" data-href='@selectUrl' @(copyright.Get<string>("Code") ==
-            copyrightFilter ? "selected" : "")>@copyright.Title</option>
-          }
-        </select>
-      </div>
-      <div class="col-md">
-        <!-- Content for medium and larger screens -->
-        <select value="@languageFilter" aria-label="Select language" id="app-oer-select-language" class="styled-select"
-          onchange="navigateToUrl('app-oer-select-language')">
-          @{
-            var removedLanguage = Link.To(parameters: MyPage.Parameters.Remove("lang"));
-          }
-          <option value="-1" data-href='@removedLanguage'>@rs.String("SelectLanguage")</option>
-          @foreach (var language in AsItems(languages))
-          {
-            var selectUrl = Link.To(parameters: MyPage.Parameters.Set("lang", language.Get<string>("Code")));
-            <option value="@(language.Get<string>("Code"))" data-href='@selectUrl' @(language.Get<string>("Code") ==
-            languageFilter ? "selected" : "")>@language.Title</option>
-          }
-        </select>
-      </div>
-    </div>
-  </div>
+  @Html.Partial("_ResourceFilters.cshtml")
 
   <div class="w-100">
     <div class="row mb-2 styled-table-header p-2 rounded-lg">
@@ -85,7 +29,8 @@
     </div>
     @foreach (var eduResource in AsItems(filteredResources))
     {
-      <a href="@Link.To(parameters: MyPage.Parameters.Set("resources", eduResource.Id).Remove("category").Remove("lang").Remove("copyright"))" @Kit.Toolbar.Empty().Edit(eduResource)>
+      <a href="@Link.To(parameters: MyPage.Parameters.Set("doc", eduResource.Id).Remove("category").Remove("lang").Remove("copyright"))"
+      @Kit.Toolbar.Empty().Edit(eduResource)>
         <section class="row border-bottom pb-4 pt-2">
           <div class="col">
             <h4>
@@ -96,20 +41,17 @@
             </div>
             <div>
               <span>Copyright:
-                @foreach (var copyright in AsItems(eduResource.Children("Copyright")))
+                <span>
+                  @String.Join(", ", AsItems(eduResource.Children("Copyright")).Select(copy => copy.Get<string>("Code")))
+                </span>
+                @if (AsItems(eduResource.Children("Copyright")).Count() == 0)
                 {
-                  <span>@Html.Raw(copyright.Get<string>("Code")),</span>
-                }
-                @if(AsItems(eduResource.Children("Copyright")).Count() == 0){
                   <span>None</span>
                 }
-              </span> - 
-              <span>Assets: @AsItems(eduResource.Children("Assets")).Count()</span> - 
+              </span> -
+              <span>Assets: @AsItems(eduResource.Children("Assets")).Count()</span> -
               <span>Languages:
-                @foreach (var translation in AsItems(eduResource.Children("Translations")))
-                {
-                  <span>@Html.Raw(translation.Get<string>("Code")),</span>
-                }
+                <span>@String.Join(", ", AsItems(eduResource.Children("Translations")).Select(translation => translation.Get<string>("Code")))</span>
               </span>
             </div>
           </div>

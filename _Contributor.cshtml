@@ -6,22 +6,33 @@
   var rs = App.Resources;
 }
 
-<div class="app-oer d-flex flex-column align-items-center g-1 w-100" @Kit.Toolbar.Empty().Edit(contributor)>
-  <div class="mb-2">
-    @contributor.Picture("Photo", settings: "Square", width: 100, imgClass: "rounded-circle")
-  </div>
-  <h1 class="mb-4">@Html.Raw(contributor.Get<string>("NameVisible"))</h1>
-  <div class="mb-2">
-    @Html.Raw(contributor.Get<string>("Biography"))
-  </div>
-  <div class="mb-2">
-    @Html.Raw(contributor.Get<string>("ContactInfo"))
-  </div>
-  <div class="mb-2">
-    @Html.Raw(contributor.Get<string>("CopyrightAgreement"))
-  </div>
-  <div>
-    @Html.Raw(contributor.Get<string>("CopyrightDefault"))
+<div class="app-oer d-flex flex-column g-1 w-100" @Kit.Toolbar.Empty().Edit(contributor)>
+  <a class="d-flex flex-row g-4 align-items-center" href='@Link.To(parameters: MyPage.Parameters.Remove("contributors"))'>
+    <div class="me-2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="height:14px">
+        <path xmlns="http://www.w3.org/2000/svg"
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+      </svg>
+    </div>
+    <div class="mt-1">@rs.String("EduResource")</div>
+  </a>
+  <div class="d-flex flex-column align-items-center  g-1">
+    <div class="mb-2">
+      @contributor.Picture("Photo", settings: "Square", width: 100, imgClass: "rounded-circle")
+    </div>
+    <h1 class="mb-4">@Html.Raw(contributor.Get<string>("NameVisible"))</h1>
+    <div class="mb-2">
+      @Html.Raw(contributor.Get<string>("Biography"))
+    </div>
+    <div class="mb-2">
+      @Html.Raw(contributor.Get<string>("ContactInfo"))
+    </div>
+    <div class="mb-2">
+      @Html.Raw(contributor.Get<string>("CopyrightAgreement"))
+    </div>
+    <div>
+      @Html.Raw(contributor.Get<string>("CopyrightDefault"))
+    </div>
   </div>
 </div>
 @Html.Partial("shared/_Assets.cshtml")
