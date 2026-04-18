@@ -1,20 +1,15 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Swiss School System - OER Catalog
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Introduction
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+This repository contains an open educational resource (OER) catalog for the Swiss school system. It provides a collection of educational materials, resources, and tools that can be freely accessed and used by educators, students, and anyone interested in the Swiss education system. The catalog includes a variety of resources such as lesson plans, textbooks, multimedia materials, and interactive tools that cover different subjects and grade levels. The goal of this catalog is to promote the use of OER in education and to support educators in providing high-quality educational materials to their students.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## History
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+### 2026-04-18
+
+1. 2dm: add latest csharp extension
+
+### 2026-03 and before
+
+1. Max: initial commit
