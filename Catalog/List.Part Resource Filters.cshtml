@@ -1,4 +1,6 @@
 @inherits Custom.Hybrid.RazorTyped
+@using ToSic.Razor.Html5
+@using AppCode.Data
 
 @{
   var categoryFilter = MyPage.Parameters["category"];
@@ -6,11 +8,11 @@
   var languageFilter = MyPage.Parameters["lang"];
 
   var query = App.GetQuery("Resource-List");
-  var categories = query.GetStream("Categories");
-  var copyrights = query.GetStream("Copyrights");
-  var languages = query.GetStream("Languages");
+  var categories = AsList<Category>(query.GetStream("Categories")).ToList();
+  var copyrights = AsList<Copyright>(query.GetStream("Copyrights")).ToList();
+  var languages = AsList<Language>(query.GetStream("Languages")).ToList();
 
-  var rs = App.Resources;
+  var rs = As<AppResources>(App.Resources);
 }
 
 <div class="mb-4">
@@ -19,14 +21,19 @@
       <!-- Content for medium and larger screens -->
       <select value="@categoryFilter" aria-label="Select category" id="app-oer-select-categories" class="styled-select"
         onchange="navigateToUrl('app-oer-select-categories')">
+
+        @* First option, without category filter *@
         @{
           var removedCategory = Link.To(parameters: MyPage.Parameters.Remove("category"));
         }
-        <option value="-1" data-href='@removedCategory'>@rs.String("SelectCategory")</option>
-        @foreach (var category in AsItems(categories))
+        <option value="-1" data-href='@removedCategory'>@rs.SelectCategory</option>
+
+        @* All other options, with category filter *@
+        @foreach (var category in categories)
         {
           var selectUrl = Link.To(parameters: MyPage.Parameters.Set("category", category.Id));
-          <option value="@category.Id" data-href='@selectUrl' @(category.Id.ToString() == categoryFilter ? "selected" : "")>@category.Title</option>
+          var selected = category.Id.ToString() == categoryFilter ? "selected" : "";
+          <option value="@category.Id" data-href='@selectUrl' @selected>@category.Title</option>
         }
       </select>
     </div>
@@ -34,30 +41,38 @@
       <!-- Content for medium and larger screens -->
       <select value="@copyrightFilter" aria-label="Select copyright" id="app-oer-select-copyright" class="styled-select"
         onchange="navigateToUrl('app-oer-select-copyright')">
+
+        @* First option, without copyright filter *@
         @{
           var removedCopyright = Link.To(parameters: MyPage.Parameters.Remove("copyright"));
         }
-        <option value="-1" data-href='@removedCopyright'>@rs.String("SelectCopyright")</option>
-        @foreach (var copyright in AsItems(copyrights))
+        <option value="-1" data-href='@removedCopyright'>@rs.SelectCopyright</option>
+
+        @* All other options, with copyright filter *@
+        @foreach (var copyright in copyrights)
         {
-          var selectUrl = Link.To(parameters: MyPage.Parameters.Set("copyright", copyright.Get<string>("Code")));
-          <option value='@(copyright.Get<string>("Code"))' data-href='@selectUrl' @(copyright.Get<string>("Code") ==
-          copyrightFilter ? "selected" : "")>@copyright.Title</option>
+          var selectUrl = Link.To(parameters: MyPage.Parameters.Set("copyright", copyright.Code));
+          var selected = copyright.Code.Equals(copyrightFilter, StringComparison.OrdinalIgnoreCase) ? "selected" : "";
+          <option value='@copyright.Code' data-href='@selectUrl' @selected>@copyright.Title</option>
         }
       </select>
     </div>
     <div class="col-md">
       <select value="@languageFilter" aria-label="Select language" id="app-oer-select-language" class="styled-select"
         onchange="navigateToUrl('app-oer-select-language')">
+
+        @* First option, without language filter *@
         @{
           var removedLanguage = Link.To(parameters: MyPage.Parameters.Remove("lang"));
         }
-        <option value="-1" data-href='@removedLanguage'>@rs.String("SelectLanguage")</option>
-        @foreach (var language in AsItems(languages))
+        <option value="-1" data-href='@removedLanguage'>@rs.SelectLanguage</option>
+
+        @* All other options, with language filter *@
+        @foreach (var language in languages)
         {
-          var selectUrl = Link.To(parameters: MyPage.Parameters.Set("lang", language.Get<string>("Code")));
-          <option value='@(language.Get<string>("Code"))' data-href='@selectUrl' @(language.Get<string>("Code") ==
-          languageFilter ? "selected" : "")>@language.Title</option>
+          var selectUrl = Link.To(parameters: MyPage.Parameters.Set("lang", language.Code));
+          var selected = language.Code.Equals(languageFilter, StringComparison.OrdinalIgnoreCase) ? "selected" : "";
+          <option value='@language.Code' data-href='@selectUrl' @selected>@language.Title</option>
         }
       </select>
     </div>

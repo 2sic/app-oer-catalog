@@ -1,12 +1,14 @@
 @inherits Custom.Hybrid.RazorTyped
+@using AppCode.Data
 
 @{
   var categoryFilter = MyPage.Parameters["category"];
   var copyrightFilter = MyPage.Parameters["copyright"];
   var languageFilter = MyPage.Parameters["lang"];
 
-  var hasFilters = !string.IsNullOrEmpty(categoryFilter) || !string.IsNullOrEmpty(copyrightFilter) ||
-  !string.IsNullOrEmpty(languageFilter);
+  var hasFilters = !string.IsNullOrEmpty(categoryFilter)
+    || !string.IsNullOrEmpty(copyrightFilter)
+    || !string.IsNullOrEmpty(languageFilter);
 
   var query = App.GetQuery("Resource-List");
 
@@ -14,11 +16,13 @@
     ? query.GetStream("Resources")
     : query.GetStream("AllResources");
 
-  var rs = App.Resources;
+  var resources = AsList<OpenEduResource>(filteredResources).ToList();
+
+  var rs = As<AppResources>(App.Resources);
 }
 
 <div class="app-oer d-flex flex-column align-items-center g-1 w-full" @Kit.Toolbar.Default()>
-  <h1 class="font-weight-medium mb-3">@rs.String("EducationResources")</h1>
+  <h1 class="font-weight-medium mb-3">@rs.EducationResources</h1>
   @Html.Partial("List.Part Resource Filters.cshtml")
 
   <div class="w-100">
@@ -30,7 +34,7 @@
         Image
       </div>
     </div>
-    @foreach (var eduResource in AsItems(filteredResources))
+    @foreach (var eduResource in resources)
     {
       var link = Link.To(parameters: MyPage.Parameters
         .Flush()
@@ -43,21 +47,24 @@
               @Html.Raw(eduResource.Title)
             </h4>
             <div class="mb-2">
-              @Html.Raw(eduResource.Get<string>("Teaser"))
+              @Html.Raw(eduResource.Teaser)
             </div>
             <div>
               <span>Copyright:
-                <span>
-                  @String.Join(", ", AsItems(eduResource.Children("Copyright")).Select(copy => copy.Get<string>("Code")))
-                </span>
-                @if (AsItems(eduResource.Children("Copyright")).Count() == 0)
+                @if (eduResource.Copyright.Count() == 0)
                 {
                   <span>None</span>
                 }
+                else
+                {
+                  <span>
+                    @String.Join(", ", eduResource.Copyright.Select(copy => copy.Code))
+                  </span>
+                }
               </span> -
-              <span>Assets: @AsItems(eduResource.Children("Assets")).Count()</span> -
+              <span>Assets: @eduResource.Assets.Count()</span> -
               <span>Languages:
-                <span>@String.Join(", ", AsItems(eduResource.Children("Translations")).Select(translation => translation.Get<string>("Code")))</span>
+                <span>@String.Join(", ", eduResource.Translations.Select(translation => translation.Code))</span>
               </span>
             </div>
           </div>

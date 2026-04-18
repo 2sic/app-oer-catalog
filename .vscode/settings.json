@@ -1,3 +1,6 @@
 {
-  "dotnet.defaultSolution": "app.sln"
+  "dotnet.defaultSolution": "app.sln",
+  "cSpell.words": [
+    "onchange"
+  ]
 }

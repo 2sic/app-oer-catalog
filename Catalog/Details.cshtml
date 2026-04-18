@@ -1,12 +1,21 @@
 @inherits Custom.Hybrid.RazorTyped
+@using AppCode.Data
 @{
+  var rs = As<AppResources>(App.Resources);
+
   var query = App.GetQuery("Resource");
   var eduResourceStream = query.GetStream("Default");
-  var eduResource = AsItems(eduResourceStream).FirstOrDefault();
-  var rs = App.Resources;
+
+  var eduResource = As<OpenEduResource>(eduResourceStream);
+  var categories = eduResource.Categories.ToList();
+  var translations = eduResource.Translations.ToList();
+  var copyrights = eduResource.Copyright.ToList();
+  var assets = eduResource.Assets.ToList();
+  var contributors = eduResource.Contributors.ToList();
 }
 
 <div class="app-oer d-flex flex-column g-1 w-100" @Kit.Toolbar.Empty().Edit(eduResource)>
+  @* Link back to all resources *@
   <a class="d-flex flex-row g-4 align-items-center mb-4" href='@Link.To(parameters: MyPage.Parameters.Remove("doc"))'>
     <div class="me-2">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="height:14px">
@@ -16,6 +25,8 @@
     </div>
     <div class="mt-1">@rs.String("AllResources")</div>
   </a>
+
+  @* Picture, Title, Teaser *@
   <div class="d-flex flex-row mb-2">
     <div class="me-4">
       @eduResource.Picture("Preview", settings: "Square", width: 100, imgClass: "rounded-circle mb-2")
@@ -23,91 +34,105 @@
     <div>
       <h1 class="font-weight-medium">@eduResource.Title</h1>
       <section class="w-100 mb-4">
-        @Html.Raw(eduResource.Get<string>("Teaser"))
+        @eduResource.Html(nameof(eduResource.Teaser))
       </section>
     </div>
   </div>
+
+  @* Description *@
   <section class="w-100 mb-4">
-    @Html.Raw(eduResource.Get<string>("Description"))
+    @eduResource.Html(nameof(eduResource.Description))
   </section>
-  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(AsItems(eduResource.Children("Categories")))>
-    <h3 class="font-weight-medium">@rs.String("Categories")</h3>
-    @String.Join(", ", AsItems(eduResource.Children("Categories")).Select(copy => copy.Get<string>("Title")))
 
-    @if (AsItems(eduResource.Children("Categories")).Count() == 0)
+  @* Categories *@
+  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(eduResource.Categories))>
+    <h3 class="font-weight-medium">@rs.Categories</h3>
+    @String.Join(", ", categories.Select(c => c.Title))
+
+    @if (categories.Count == 0)
     {
       <span>None</span>
     }
   </section>
-  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(AsItems(eduResource.Children("Translations")))>
-    <h3 class="font-weight-medium">@rs.String("Translations")</h3>
-    @String.Join(", ", AsItems(eduResource.Children("Translations")).Select(copy => copy.Get<string>("Code")))
+
+  @* Translations / Languages *@
+  <section class="w-100 mb-4">
+    <h3 class="font-weight-medium">@rs.Translations</h3>
+    @String.Join(", ", translations.Select(t => t.Code))
 
   </section>
-  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(AsItems(eduResource.Children("Copyright")))>
-    <h3 class="font-weight-medium">@rs.String("Copyright")</h3>
-    @String.Join(", ", AsItems(eduResource.Children("Copyright")).Select(copy => copy.Get<string>("Code")))
 
-    @if (AsItems(eduResource.Children("Copyright")).Count() == 0)
+  @* Copyright *@
+  <section class="w-100 mb-4">
+    <h3 class="font-weight-medium">@rs.Copyright</h3>
+    @String.Join(", ", copyrights.Select(c => c.Code))
+
+    @if (copyrights.Count == 0)
     {
       <span>None</span>
     }
   </section>
-  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(AsItems(eduResource.Children("Assets")))>
-    <h3 class="font-weight-medium">@rs.String("Assets")</h3>
-    @foreach (var asset in AsItems(eduResource.Children("Assets")))
+
+  @* Assets *@
+  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(eduResource.Assets)>
+    <h3 class="font-weight-medium">@rs.Assets</h3>
+    @foreach (var asset in assets)
     {
       <div @Kit.Toolbar.Empty().Edit(asset)>
-        @if (!string.IsNullOrEmpty(asset.Get<string>("Link")))
+        @if (!string.IsNullOrEmpty(asset.Link))
         {
           <div>
-            <div class="font-weight-medium">@rs.String("Link")</div>
-            <a href='@(asset.Get<string>("Link"))' target="_blank">@(asset.Get<string>("Link"))</a>
+            <div class="font-weight-medium">@rs.Link</div>
+            <a href='@asset.Link' target="_blank">@asset.Link</a>
           </div>
         }
-        else if (!string.IsNullOrEmpty(asset.Get<string>("Video")))
+        else if (!string.IsNullOrEmpty(asset.Video))
         {
           <div>
-            <div class="font-weight-medium">@rs.String("Video")</div>
-            <a href='@(asset.Get<string>("Video"))' target="_blank">@(asset.Get<string>("Video"))</a>
+            <div class="font-weight-medium">@rs.Video</div>
+            <a href='@asset.Video' target="_blank">@asset.Video</a>
           </div>
         }
-        else if (!string.IsNullOrEmpty(asset.Get<string>("Document")))
+        else if (!string.IsNullOrEmpty(asset.Document))
         {
           <div>
-            <div class="font-weight-medium">@rs.String("Document")</div>
-            <a href='@(asset.Get<string>("Document"))' target="_blank">@(asset.Get<string>("Document"))</a>
+            <div class="font-weight-medium">@rs.Document</div>
+            <a href='@asset.Document' target="_blank">@asset.Document</a>
           </div>
         }
       </div>
     }
-    @if (AsItems(eduResource.Children("Assets")).Count() == 0)
+    @if (assets.Count == 0)
     {
       <div>None</div>
     }
   </section>
+
+  @* Contributors *@
   <section class="w-100 mb-4">
-    <h3 class="font-weight-medium mb-3">@rs.String("Contributors")</h3>
+    <h3 class="font-weight-medium mb-3">@rs.Contributors</h3>
     <div class="row w-100 mb-2 styled-table-header p-2 rounded-lg">
       <div class="col font-weight-medium">
-        @rs.String("Name")
+        @rs.Name
       </div>
       <div class="col">
-        @rs.String("ContactInfo")
+        @rs.ContactInfo
       </div>
     </div>
-    @foreach (var contributor in AsItems(eduResource.Children("Contributors")))
+    @foreach (var contributor in contributors)
     {
-      var contibutorLink = Link.To(parameters: MyPage.Parameters.Set("contributors",
-      contributor.Id).Remove("resources").Remove("category").Remove("lang").Remove("copyright"));
+      var contributorLink = Link.To(parameters: MyPage.Parameters
+        .Flush()
+        .Set("contributors", contributor.Id)
+      );
 
-      <a class="row w-100 border-bottom pb-4 pt-2 ps-2 pe-2" href="@contibutorLink"
+      <a class="row w-100 border-bottom pb-4 pt-2 ps-2 pe-2" href="@contributorLink"
       @Kit.Toolbar.Empty().Edit(contributor)>
         <div class="col font-weight-medium">
-          @Html.Raw(contributor.Get<string>("NameVisible"))
+          @Html.Raw(contributor.NameVisible)
         </div>
         <div class="col">
-          @Html.Raw(contributor.Get<string>("ContactInfo"))
+          @Html.Raw(contributor.ContactInfo)
         </div>
       </a>
     }
