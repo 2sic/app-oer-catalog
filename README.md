@@ -16,6 +16,7 @@ and to support educators in providing high-quality educational materials to thei
 
 1. 2dm: add latest csharp extension
 1. 2dm: Generate data models
+1. 2dm: rename files/folders to make it clearer
 
 ### 2026-03 and before
 

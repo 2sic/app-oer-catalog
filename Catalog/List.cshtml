@@ -10,13 +10,16 @@
 
   var query = App.GetQuery("Resource-List");
 
-  var filteredResources = hasFilters ? query.GetStream("Resources") : query.GetStream("AllResources");
+  var filteredResources = hasFilters
+    ? query.GetStream("Resources")
+    : query.GetStream("AllResources");
+
   var rs = App.Resources;
 }
 
 <div class="app-oer d-flex flex-column align-items-center g-1 w-full" @Kit.Toolbar.Default()>
   <h1 class="font-weight-medium mb-3">@rs.String("EducationResources")</h1>
-  @Html.Partial("_ResourceFilters.cshtml")
+  @Html.Partial("List.Part Resource Filters.cshtml")
 
   <div class="w-100">
     <div class="row mb-2 styled-table-header p-2 rounded-lg">
@@ -29,8 +32,11 @@
     </div>
     @foreach (var eduResource in AsItems(filteredResources))
     {
-      <a href="@Link.To(parameters: MyPage.Parameters.Set("doc", eduResource.Id).Remove("category").Remove("lang").Remove("copyright"))"
-      @Kit.Toolbar.Empty().Edit(eduResource)>
+      var link = Link.To(parameters: MyPage.Parameters
+        .Flush()
+        .Set("doc", eduResource.Id)
+      );
+      <a href="@link" @Kit.Toolbar.Empty().Edit(eduResource)>
         <section class="row border-bottom pb-4 pt-2">
           <div class="col">
             <h4>
@@ -72,4 +78,4 @@
   </script>
 </div>
 
-@Html.Partial("shared/_Assets.cshtml")
+@Html.Partial("./shared/Assets.cshtml")
