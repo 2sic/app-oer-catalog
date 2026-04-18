@@ -18,6 +18,7 @@ and to support educators in providing high-quality educational materials to thei
 1. 2dm: rename files/folders to make it clearer
 1. 2dm: Generate data models
 1. 2dm: Update code to use latest 2sxc features with strong-typed models
+1. 2dm: changed links to assets to be tiles, with icons and titles, and added hover effect
 
 ### 2026-03 and before
 

@@ -44,67 +44,33 @@
     @eduResource.Html(nameof(eduResource.Description))
   </section>
 
-  @* Categories *@
-  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(eduResource.Categories))>
-    <h3 class="font-weight-medium">@rs.Categories</h3>
-    @String.Join(", ", categories.Select(c => c.Title))
 
-    @if (categories.Count == 0)
-    {
-      <span>None</span>
-    }
-  </section>
-
-  @* Translations / Languages *@
-  <section class="w-100 mb-4">
-    <h3 class="font-weight-medium">@rs.Translations</h3>
-    @String.Join(", ", translations.Select(t => t.Code))
-
-  </section>
-
-  @* Copyright *@
-  <section class="w-100 mb-4">
-    <h3 class="font-weight-medium">@rs.Copyright</h3>
-    @String.Join(", ", copyrights.Select(c => c.Code))
-
-    @if (copyrights.Count == 0)
-    {
-      <span>None</span>
-    }
-  </section>
-
-  @* Assets *@
+  @* Assets / Resources *@
   <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(eduResource.Assets)>
     <h3 class="font-weight-medium">@rs.Assets</h3>
-    @foreach (var asset in assets)
-    {
-      <div @Kit.Toolbar.Empty().Edit(asset)>
-        @if (!string.IsNullOrEmpty(asset.Link))
-        {
-          <div>
-            <div class="font-weight-medium">@rs.Link</div>
-            <a href='@asset.Link' target="_blank">@asset.Link</a>
-          </div>
-        }
-        else if (!string.IsNullOrEmpty(asset.Video))
-        {
-          <div>
-            <div class="font-weight-medium">@rs.Video</div>
-            <a href='@asset.Video' target="_blank">@asset.Video</a>
-          </div>
-        }
-        else if (!string.IsNullOrEmpty(asset.Document))
-        {
-          <div>
-            <div class="font-weight-medium">@rs.Document</div>
-            <a href='@asset.Document' target="_blank">@asset.Document</a>
-          </div>
-        }
-      </div>
-    }
     @if (assets.Count == 0)
     {
       <div>None</div>
+    }
+    else
+    {
+      <ul class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 docs-tiles list-unstyled">
+        @foreach (var asset in assets)
+        {
+          <li class="col" @Kit.Toolbar.Empty().Edit(asset)>
+            <div class="card h-100 text-center position-relative">
+              <div class="card-body d-flex flex-column justify-content-center align-items-center py-4">
+                <icon class="mb-2">
+                  @Html.Raw(asset.LinkType.Icon.Replace("#000000", "currentColor"))
+                </icon>
+                <div class="fw-semibold">@asset.Title</div>
+                <div class="small text-muted mt-1">@Html.Raw(asset.Description)</div>
+              </div>
+              <a href="@asset.Link" target="_blank" rel="noopener noreferrer nofollow" class="stretched-link"></a>
+            </div>
+          </li>
+        }
+      </ul>
     }
   </section>
 
@@ -137,6 +103,74 @@
       </a>
     }
   </section>
+
+  @* Categories *@
+  <section class="w-100 mb-4" @Kit.Toolbar.Empty().Edit(eduResource.Categories))>
+    <h3 class="font-weight-medium">@rs.Categories</h3>
+    @String.Join(", ", categories.Select(c => c.Title))
+
+    @if (categories.Count == 0)
+    {
+      <span>None</span>
+    }
+  </section>
+
+  @* Translations / Languages *@
+  <section class="w-100 mb-4">
+    <h3 class="font-weight-medium">@rs.Translations</h3>
+    @if (translations.Count == 0)
+    {
+      <span>None</span>
+    }
+    else foreach (var translation in translations)
+    {
+      <div>
+        <div class="font-weight-medium">
+          @translation.Title
+          (@translation.Code)
+        </div>
+      </div>
+    }
+  </section>
+
+  @* Copyright *@
+  <section class="w-100 mb-4">
+    <h3 class="font-weight-medium">@rs.Copyright</h3>
+    @if (copyrights.Count == 0)
+    {
+      <span>Unknown</span>
+    }
+    else foreach (var copyright in copyrights)
+    {
+      <div>
+        <div class="font-weight-medium">
+          @copyright.Title
+          (@copyright.Code)
+        </div>
+      </div>
+    }
+    
+  </section>
 </div>
 
 @Html.Partial("./shared/Assets.cshtml")
+
+<style>
+  .docs-tiles .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .docs-tiles .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .docs-tiles .card svg {
+    transition: transform 0.2s ease;
+    width: 48px;
+    height: 48px;
+    color: #452A78 !important;
+    
+  }
+  
+</style>
